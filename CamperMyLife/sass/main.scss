@@ -1,0 +1,760 @@
+@import 'animista';
+
+$main-color: #F2BF80;
+$second-color: #403527;
+$third-color: #F29544;
+$fourth-color: #D96F32;
+$fifth-color: #BF755A;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+
+body {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+}
+
+.logoSpan {
+    color: $fourth-color;
+}
+
+.opacity {
+    opacity: 0.8
+}
+
+.sectionTitle {
+    text-align: center;
+    text-transform: uppercase;
+    color: $second-color;
+    padding-top: 1em;
+}
+
+.underline {
+    width: 8em;
+    height: .4em;
+    background-color: $main-color;
+    margin: 0 auto;
+}
+
+.shadow {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: -1;
+}
+
+.white-area {
+    z-index: 1;
+    padding: 1em;
+    color: $second-color;
+    border-radius: 30px;
+    background-color: rgba(255,255,255,.6);
+}
+
+// nav
+
+nav {
+    z-index: 9;
+    text-transform: uppercase;
+    background-color: $second-color;
+
+    
+    .navbar-brand {
+        color: $main-color;
+        font-size: 1rem;
+        transition: color .3s;
+    }
+    
+    .nav-link {
+        font-size: .8rem;
+        color: $main-color;
+        padding: 1em;
+        transition: color .3s;
+        text-align: center;
+    }
+
+    
+    .fa-caravan {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $fourth-color;
+        padding-right: .1em;
+    }
+
+    .navbar-toggler {
+        color: $second-color;
+    }
+
+    .fa-bars {
+        color: $fourth-color;
+        font-size: 2rem;
+        padding: .3em;
+        border: none;
+    }
+
+    .active {
+        color: $fourth-color;
+    }
+    
+    a:hover, .nav-link:hover {
+        color: $fourth-color;
+    }
+
+}
+
+// header
+
+.header {
+    position: relative;
+    height: 100vH;
+    background-image: url('/img/headerMobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 70%;
+    object-fit: cover;
+
+    .headerText {
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        h2 {
+            font-weight: bold;
+            padding: 0.2em;
+            letter-spacing: 2px
+        }
+
+        p {
+            display: none;
+        }
+    }
+
+
+    .btn {
+        border: 2px solid $second-color;
+        border-radius: 30px;
+        color: $second-color;
+        font-size: 1rem;
+        transition: background-color 1s, color 1s, border 1s;
+    }
+    
+    .btn:hover {
+        border: $fourth-color;
+        background-color: $fourth-color;
+        color: white;
+    }
+
+    .fa-arrow-circle-down {
+        position: absolute;
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.8rem;
+        color: $fourth-color;
+        z-index: 2;
+    }
+}
+
+// main start
+// about us
+
+.about-us {
+
+    i {
+        margin-top: 2em;
+        font-size: 2.5rem;
+        color: $main-color;
+        transition: transform .5s, color .5s;
+    }
+    
+    .about-us-card:hover i {
+        color: $third-color;
+        transform: scale(1.5);
+    }
+
+    .about-us-card-title {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        color: $second-color;
+    }
+    
+    .about-us-card-text {
+        font-size: 1rem;
+        color: $second-color;
+    }
+}
+
+// about us hero
+
+.about-us-hero {
+
+    position: relative;
+    background-image: url('/img/heroMobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 60%;
+
+    .about-us-hero-card {
+        color: $second-color;
+        max-width: 80%;
+        margin: auto;
+    }
+
+    .about-us-hero-title {
+        overflow: hidden;
+        position: relative;
+        border-radius: 30px;
+        background-color: rgba(255,255,255,.6);
+        padding-bottom: 3em;
+        margin-top: 6em;
+        max-width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    i {
+        font-size: 2.5rem;
+        transition: transform 2s;
+    }
+
+    .about-us-card-title {
+        font-size: 1.2rem;
+    }
+
+    .about-us-card-text {
+        text-align: justify;
+        font-size: 1rem;
+    }
+
+    .about-us-hero-card:hover i {
+        transform: rotate(360deg);
+    }
+
+}
+
+// our travels
+
+.ourtravels {
+
+    .carousel {
+        margin-top: 4em;
+        height: 250px;
+
+        img {
+            height: 250px;
+            filter: sepia(60%);
+        }
+
+        .carousel-caption {
+            color: $second-color;
+            border-radius: 30px;
+            background-color: rgba(255,255,255,.6);
+            width: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+    }
+
+}
+
+// our vehicles
+
+.ourvehicles {
+    position: relative;
+    background-image: url('/img/desert.jpg');
+    z-index: 0;
+
+    .ourvehicles-title {
+        border-radius: 30px;
+        background-color: rgba(255,255,255,.6);
+        padding-bottom: 2em;
+        margin-top: 6em;
+        max-width: 80%;
+        margin: auto;
+    }
+
+
+    .ourvehicles-cards {
+        padding-bottom: 10em;
+        
+        .card {
+            color: $second-color;
+            background-color: rgba(255,255,255,.6);
+
+            .img-container {
+                margin: 0;
+                overflow: hidden;
+            }
+            
+            .card-text {
+                width: 100%;
+                text-align: justify;
+                font-size: 0.8rem;
+            }
+            
+            img {
+                transition: transform 1s;
+            }
+
+            button {
+                padding: .5em;
+                font-size: .6rem;
+                color: $second-color;
+                border-radius: 30px;
+                background-color: rgba(255, 255, 255, 0.6);
+                transition: color 1s, background-color 1s;
+            }
+
+            button:hover {
+                color: white;
+                background-color: $fourth-color;
+            }
+
+        }
+
+        .card:hover img {
+            transform: scale(1.5);
+        }
+        
+    }
+}
+
+// our team
+
+.ourteam {
+
+    .team-cards {
+
+        .card {
+            height: 400px;
+            margin: 2em;
+            text-align: justify;
+            color: $second-color;
+            background-color: rgb(243, 241, 241);
+            
+            img {
+                height: 220px;
+            }
+
+            h5 {
+                padding-bottom: .5em;
+                text-transform: uppercase;
+            }
+            
+            p {
+                font-size: .8rem;
+
+            }
+
+            .card-text {
+                font-weight: bold;
+            }
+
+            .card-text-second {
+                display: none;
+            }
+            
+            .team-card-footer {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 8%;
+                background-color: rgb(236, 228, 228);
+                
+                i {
+                    color: $fifth-color;
+                    font-size: 1.5rem;
+                    padding: 0.3em;
+                    transition: color .3s, transform .3s;
+                }
+
+                i:hover {
+                    color: $fourth-color;
+                    transform: scale(1.2);
+                }
+            }
+
+        }
+
+    }
+
+
+}
+
+// achievements
+
+.achievements {
+    overflow: hidden;
+    padding-bottom: 10em;
+
+    .achievement-card {
+        padding: 1em;
+        border: 2px solid rgb(243, 241, 241);;
+        background-color: rgb(243, 241, 241);
+        color: $second-color;
+        
+        i {
+            font-size: 3rem;
+            padding: .5em;
+        }
+
+        h5 {
+            padding: 1em;
+            color: transparent;
+            text-shadow: 0 0 10px #000;
+            transition: color .5s, text-shadow .5s;
+        }
+
+        p {
+            font-size: 1rem;
+            text-align: center;
+        }
+
+    }
+
+    .achievement-card:hover h5 {
+        color: transparentize($color: #000000, $amount: 0);
+        text-shadow: none;
+    }
+
+}
+
+// contact
+
+.contact {
+    position: relative;
+    background-image: url('/img/concatc.jpg');
+    background-size: cover;
+    background-position-y: 50%;
+    z-index: 0;
+    // background-attachment: fixed;
+
+
+    .contact-title {
+        border-radius: 30px;
+        background-color: rgba(255,255,255,.6);
+        padding-bottom: 2em;
+        margin-top: 6em;
+        max-width: 80%;
+        margin: auto;
+        z-index: 1;
+    }
+
+    .contact-item{
+        background-color: rgba(255, 255, 255, .6);
+        padding: 2em;
+        color: $second-color;
+        z-index: 1;
+
+        p {
+            font-size: 1rem;
+        }
+
+        i {
+            font-size: 1.8rem;
+            padding: .8em;
+            color: $fourth-color;
+            transition: color .5s;
+        }
+
+        i:hover {
+            color: $third-color;
+        }
+
+    }
+
+
+}
+
+// 
+// media
+// 
+
+@media (min-width: 768px) {
+    .header {
+        height: 100vH;
+        background-image: url('/img/headerDesktop.jpg');
+    
+        .headerText {
+            padding: 5em;
+            border-radius: 50px;
+            background-color: rgba(255,255,255,.6);
+    
+            h2 {
+               font-size: 2rem;
+            }
+    
+            p {
+                display: block;
+                font-size: 1.5rem;
+            }
+    
+        }
+    
+        .headerShadow {
+            background-color: rgba(0, 0, 0, .6);
+        }
+
+        .btn {
+            border: 2.5px solid $second-color;
+            border-radius: 40px;
+            font-size: 1.5rem;
+        }
+    
+        .fa-arrow-circle-down {
+            bottom: 150px;
+            font-size: 2.5rem;
+        }
+
+    }
+
+    .about-us-hero {
+
+        background-image: url('/img/heroDesktop.jpg');
+        background-position-y: 80%;
+    
+        .about-us-hero-title {
+            max-width: 30%;
+        }
+
+        .about-us-hero-card {
+          max-width: 30%;
+          margin-top: 8em !important;
+          margin-bottom: 10em;
+        }
+    
+        i {
+            font-size: 3rem;
+            margin-top: .5em;
+        }
+    
+        .about-us-card-title {
+            font-size: 1.5rem;
+        }
+    
+        .about-us-card-text {
+            font-size: .8rem;
+        }
+    
+    }
+
+    .ourvehicles-cards {
+        
+        .card {
+            
+            .card-text {
+                font-size: 1rem !important;
+            }
+
+            button {
+                padding: .8em !important;
+                font-size: .8rem !important;
+            }
+
+        }
+        
+    }
+
+    .ourtravels {
+
+        .carousel {
+            margin-top: 7em;
+            height: 450px;
+    
+         
+            .carousel-caption {
+                width: 70%;
+                left: 50%;
+                transform: translateX(-50%);
+
+                h5 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+
+            }
+            
+        }
+    
+    }
+
+    
+
+    .ourteam {
+
+        .team-cards {
+    
+            .card {
+                height: 420px;
+                
+                img {
+                    height: 220px;
+                }
+                
+                p {
+                    font-size: .8rem;
+                }}
+    
+        }
+    
+    
+    }
+
+    
+
+}
+
+@media (min-width: 1200px) {
+
+    nav .navbar-brand {
+        letter-spacing: 2px;
+        font-size: 1.7rem;
+    }
+
+    nav .nav-link {
+        font-size: 1rem;
+    }
+
+    .header {
+        background-position-y: 100%;
+        background-attachment: fixed;
+        
+
+        .headerText {
+            h2 {
+               font-size: 3rem;
+            }
+    
+            p {
+                font-size: 2rem;
+            }
+    
+        }
+
+        .btn {
+            border: 3px solid $second-color;
+            font-size: 1.8rem;
+        }
+    
+        .fa-arrow-circle-down {
+            bottom: 12%;
+            font-size: 3.5rem;
+        }
+    
+    }
+
+    .about-us-hero {
+
+        background-image: url('/img/heroDesktop.jpg');
+        background-position-y: 90%;
+        // background-attachment: fixed;
+    
+        .about-us-hero-card {
+          margin-top: 8em !important;
+          margin-bottom: 10em;
+        }
+    
+        i {
+            font-size: 3rem;
+        }
+    
+        .about-us-card-title {
+            font-size: 1.3rem;
+        }
+    
+        .about-us-card-text {
+            font-size: 1rem;
+            padding: 1em 1em 1.5em 1em;
+        }
+    
+    }
+    
+    .ourtravels {
+
+        .carousel {
+            height: 650px;
+            width: 80%;
+            margin-left: 10%;
+            margin-bottom: 6em;
+    
+            img {
+                height: 650px;
+            }
+    
+            .carousel-caption {
+
+                h5 {
+                    font-size: 1.6rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+
+            }
+            
+        }
+    
+    }
+
+    
+    .ourvehicles-cards {
+        
+        .card {
+            
+            .card-text {
+                font-size: 1rem !important;
+            }
+
+            button {
+                padding: .8em !important;
+                font-size: .8rem !important;
+            }
+
+        }
+        
+    }
+
+    .ourteam {
+
+        .team-cards {
+    
+            .card {
+                height: 580px;
+                
+                img {
+                    height: 320px;
+                }
+                
+                p {
+                    font-size: .9rem;
+                }
+    
+                .card-text-second {
+                        display: block;
+                        text-align: justify;
+                    }
+    
+                }
+    
+        }
+    
+    
+    }
+
+}

@@ -1,0 +1,682 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #f2f2f2;
+  font-size: 1.6rem;
+}
+
+.opacity {
+  opacity: 0.8;
+}
+
+.hero-shadow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.additional-text {
+  font-size: 1.8rem;
+}
+
+.top-hero {
+  position: relative;
+  height: 40rem;
+  background-size: cover;
+  z-index: 0;
+}
+
+.top-hero-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  z-index: 1;
+  color: #f2f2f2;
+}
+
+.kenburns-bottom {
+  -webkit-animation: kenburns-bottom 5s ease-out both;
+  animation: kenburns-bottom 5s ease-out both;
+}
+
+.wobble-hor-bottom {
+  -webkit-animation: wobble-hor-bottom 0.8s infinite both;
+  animation: wobble-hor-bottom 0.8s infinite both;
+}
+
+.navbar {
+  background-color: #727272;
+  z-index: 3;
+}
+
+.navbar .navbar-brand {
+  color: #f2f2f2;
+  font-size: 2rem;
+  font-weight: bold;
+  -webkit-transition: shadow .5s;
+  transition: shadow .5s;
+}
+
+.navbar .navbar-brand:hover {
+  text-shadow: 0px 0px 5px #f2f2f2;
+}
+
+.navbar .fa-bars {
+  font-size: 2.5rem;
+  color: #f2f2f2;
+}
+
+.navbar .navbar-toggler {
+  color: #f2f2f2;
+}
+
+.navbar .nav-link {
+  color: #f2f2f2;
+  -webkit-transition: shadow .5s;
+  transition: shadow .5s;
+}
+
+.navbar .nav-link:hover {
+  text-shadow: 0px 0px 5px #f2f2f2;
+}
+
+.navbar .active {
+  text-decoration: underline;
+}
+
+header {
+  font-size: 2rem;
+}
+
+header .carousel-item {
+  position: relative;
+  height: 400px;
+  background-size: cover;
+  z-index: 0;
+}
+
+header .carousel-img-one {
+  background-image: url("../img/headerOneMobile.jpg");
+  background-position-x: 30%;
+}
+
+header .carousel-img-two {
+  background-image: url("../img/headerTwoMobile.jpg");
+  background-position-x: 90%;
+}
+
+header .carousel-img-three {
+  background-image: url("../img/headerThreeMobile.jpg");
+  background-position-x: 50%;
+}
+
+header .carousel-text {
+  color: #f2f2f2;
+}
+
+.mainOne {
+  margin-top: 1em;
+}
+
+.mainOne .main-card {
+  margin-top: 2em;
+  padding: 1em;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.mainOne .main-card .fas {
+  font-size: 3rem;
+  padding: .5em;
+  color: #262626;
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+}
+
+.mainOne .main-card .display-5 {
+  color: #0c0c0c;
+  text-transform: uppercase;
+}
+
+.mainOne .main-card .card-text {
+  color: #0c0c0c;
+}
+
+.mainOne .main-card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.mainOne .main-card:hover .fas {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.mainTwo {
+  margin-top: 3em;
+  z-index: -2;
+  overflow: hidden;
+  background-image: url("../img/mainMobile.jpg");
+  background-size: cover;
+  background-position-x: 50%;
+  height: 500px;
+}
+
+.mainTwo .mainTwoText {
+  z-index: 1;
+  color: #f2f2f2;
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
+}
+
+.mainTwo .mainTwoText p:first-child {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.mainTwo .mainTwoText p:last-child {
+  font-size: 2rem;
+}
+
+.mainThree {
+  color: #0c0c0c;
+}
+
+.mainThree .mainThreeBoxOne {
+  text-align: justify;
+}
+
+.mainThree .mainThreePhoto {
+  overflow: hidden;
+  position: relative;
+  background-image: url("../img/mainThree.jpg");
+  background-position-x: 50%;
+  z-index: -2;
+  padding: 0;
+  height: 400px;
+}
+
+.mainThree .mainThreeBoxTwo {
+  background-color: #bfbfbf;
+}
+
+.mainThree .mainThreeBoxThree {
+  text-align: justify;
+}
+
+.aboutUsOne .top-hero {
+  background-image: url("../img/aboutUsHeroMobile.jpg");
+  background-position-x: 50%;
+}
+
+.aboutUsOne .candy {
+  color: #0c0c0c;
+  text-align: justify;
+}
+
+.aboutUsOne .candy i {
+  color: #262626;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.aboutUsOne .candy:hover i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.aboutUsTwo .passion {
+  text-align: justify;
+}
+
+.aboutUsTwo .athlete {
+  background-image: url("../img/athelete.jpg");
+  height: 350px;
+  background-position-x: 50%;
+  background-position-y: 70%;
+}
+
+.aboutUsTwo .goal {
+  text-align: justify;
+}
+
+.aboutUsThree {
+  margin: 6em;
+}
+
+.aboutUsThree .fa-syringe {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.aboutUsThree .cardUsThree {
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  margin: 1em;
+}
+
+.aboutUsThree .cardUsThree .cardI {
+  font-size: 4rem;
+}
+
+.aboutUsThree .cardUsThree .cardText {
+  text-align: justify;
+}
+
+.aboutUsThree .cardUsThree:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.aboutUsThree:hover i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.aboutUsThree .cardUsThree:nth-child(even) {
+  background-color: #bfbfbf;
+}
+
+.aboutUsThree .cardUsThree:nth-child(odd) {
+  border: solid 1px #727272;
+}
+
+.offerOne .top-hero {
+  background-image: url("../img/offerHeroMobile.jpg");
+  background-position-y: 90%;
+  background-position-x: 50%;
+}
+
+.offerAccordion .accordion-item {
+  background-color: #f2f2f2;
+  padding: 0;
+}
+
+.offerAccordion .accordion-item .accordingImg {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  -webkit-filter: brightness(0.3);
+          filter: brightness(0.3);
+}
+
+.offerAccordion .accordion-item .accordingImgOne {
+  background-image: url("../img/itemOne.jpg");
+  background-position: 60% 20%;
+}
+
+.offerAccordion .accordion-item .accordingImgTwo {
+  background-image: url("../img/itemTwo.jpg");
+  background-position: 60% 40%;
+}
+
+.offerAccordion .accordion-item .accordingImgThree {
+  background-image: url("../img/itemThree.jpg");
+  background-position: 60% 20%;
+}
+
+.offerAccordion .accordion-item .accordingImgFour {
+  background-image: url("../img/itemFour.jpg");
+  background-position: 30% 20%;
+}
+
+.offerAccordion .accordion-item .accordion-button {
+  background-color: #f2f2f2;
+  border-color: #bfbfbf;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #0c0c0c;
+  font-size: 2rem;
+  font-family: 'Raleway', sans-serif;
+}
+
+.offerAccordion .accordion-item .accordion-body {
+  text-align: justify;
+}
+
+.offerAccordion .accordion-item .btn-secondary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.pricingOne .top-hero {
+  background-image: url("../img/pricingMobile.jpg");
+}
+
+.pricingOne .offer p:nth-child(2n) {
+  text-align: justify;
+  margin: 1em;
+}
+
+.pricingTwo .membership p:nth-child(2n) {
+  text-align: justify;
+  margin: 1em;
+}
+
+.pricingTwo .pricingContainer .card {
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.pricingTwo .pricingContainer .card-header {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.pricingTwo .pricingContainer .card-header-grey {
+  background-color: #727272;
+  color: #f2f2f2;
+}
+
+.pricingTwo .pricingContainer .card-title {
+  font-size: 1.7rem;
+}
+
+.pricingTwo .pricingContainer .card-title span {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.pricingTwo .pricingContainer .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75%;
+  margin: 20px auto 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 20px;
+}
+
+.pricingTwo .pricingContainer .card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.contactOne .top-hero {
+  background-image: url("../img/contactMobile.jpg");
+  background-position-x: 50%;
+  background-position-y: 10%;
+}
+
+.contactTwo .btn {
+  color: #f2f2f2;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #262626;
+  color: #f2f2f2;
+}
+
+@media (min-width: 768px) {
+  header .carousel-item {
+    height: 600px;
+  }
+  header .carousel-img-one {
+    background-position-x: 0%;
+  }
+  header .carousel-img-two {
+    background-position-x: 100%;
+    background-position-y: 100%;
+  }
+  header .carousel-img-three {
+    background-position-x: 50%;
+  }
+  .mainTwo {
+    height: 600px;
+  }
+  .mainTwo .mainTwoText p:first-child {
+    text-transform: uppercase;
+    font-size: 3rem;
+  }
+  .mainTwo .mainTwoText p:last-child {
+    font-size: 1.8rem;
+  }
+  .aboutUsOne .top-hero {
+    background-image: url("../img/aboutUsHeroDesktop.jpg");
+    background-position-y: 50%;
+  }
+  .aboutUsOne .candy {
+    font-size: 2rem;
+  }
+  .offerOne .top-hero {
+    background-image: url("../img/offerHeroDesktop.jpg");
+    background-position-y: 70%;
+    background-position-x: 50%;
+  }
+  .offerOne .offer {
+    font-size: 2rem;
+    text-align: justify;
+  }
+  .contactOne .top-hero {
+    background-image: url("../img/contactDektop.jpg");
+    background-position-x: 50%;
+    background-position-y: 10%;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav-link {
+    font-size: 1.6rem;
+  }
+  header .carousel-item {
+    height: 700px;
+  }
+  header .carousel-img-one {
+    background-image: url("../img/headerOneDesktop.jpg");
+    background-position-y: 50%;
+  }
+  header .carousel-img-two {
+    background-image: url("../img/headerTwoDesktop.jpg");
+    background-position-y: 50%;
+  }
+  header .carousel-img-three {
+    background-image: url("../img/headerThreeDesktop.jpg");
+    background-position-y: 30%;
+  }
+  .mainTwo {
+    background-image: url("../img/mainDesktop.jpg");
+    height: 700px;
+    background-position-y: 30%;
+  }
+  .mainTwo .mainTwoText p:first-child {
+    text-transform: uppercase;
+    font-size: 3rem;
+  }
+  .mainTwo .mainTwoText p:last-child {
+    font-size: 2.5rem;
+  }
+  .aboutUsOne .top-hero-text {
+    font-size: 5rem;
+  }
+  .aboutUsOne .top-hero {
+    height: 50rem;
+  }
+  .aboutUsTwo {
+    height: 500px;
+    font-size: 2rem;
+    overflow: hidden;
+  }
+  .aboutUsTwo .passion {
+    -webkit-transform: skewX(-10deg);
+            transform: skewX(-10deg);
+  }
+  .aboutUsTwo .athlete {
+    background-image: url("../img/athelete.jpg");
+    background-position-y: 35%;
+    height: 500px;
+    -webkit-transform: skewX(-10deg);
+            transform: skewX(-10deg);
+  }
+  .aboutUsTwo .goal {
+    -webkit-transform: skewX(-10deg);
+            transform: skewX(-10deg);
+  }
+  .offerOne .top-hero {
+    background-image: url("../img/offerHeroDesktop.jpg");
+    background-position-y: 50%;
+  }
+  .offerOne .top-hero .top-hero-text {
+    font-size: 6rem;
+  }
+  .offerOne .offer {
+    font-size: 2rem;
+    text-align: justify;
+  }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-10-16 23:30:36
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation kenburns-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes kenburns-bottom {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 84%;
+    transform-origin: 50% 84%;
+  }
+  100% {
+    -webkit-transform: scale(1.25) translateY(15px);
+    transform: scale(1.25) translateY(15px);
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+  }
+}
+
+@keyframes kenburns-bottom {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 84%;
+    transform-origin: 50% 84%;
+  }
+  100% {
+    -webkit-transform: scale(1.25) translateY(15px);
+    transform: scale(1.25) translateY(15px);
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+  }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-10-20 19:56:10
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation wobble-hor-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+    transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+    transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+    transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+    transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

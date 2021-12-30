@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #181D23;
+}
+
+.active{
+    background-color: rgba(255, 255, 255, .2)
+}
+
+.panel{
+    height: 1200px;
+    width: 1600px;
+    border: 1px solid #4B5769;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.white{
+    color: white;
+}
+
+.grey{
+    color: grey;
+}
+
+/* main */
+/* panenLeft starts*/
+
+.panelLeft{
+    background-color: #4B5769;
+}
+
+.panelLeft .clock {
+    text-align: center;
+}
+
+.menu a {
+   border-radius: 10%;
+   text-decoration: none;
+   text-transform: uppercase;
+   transition: background-image 1s;
+}
+
+.menu a i {
+    font-size: 3rem;
+}
+
+.menu a:hover {
+    background-image: linear-gradient(160deg, rgba(0, 110, 255, .25) 0%, rgba(9, 255, 0, 0.25) 100%);
+    color: white;
+}
+
+/* panelLeft ends */
+/* panelRight starts home page */
+
+.panelRight{
+    background-image: linear-gradient(180deg, rgba(55, 64, 76, 1) 0%, rgba(21, 26, 32, 1) 100%);
+}
+
+.main-stat-box{
+    height: 140px;
+    border-radius: 15px;
+    transition: backgroud-color 1s;
+}
+
+.apexcharts-legend-text{
+    font-size: 1.5rem !important;
+    color: white !important;
+}
+
+.main-stat-box:hover {
+    background-color: rgba(255, 255, 255, .08);
+}
+
+.tr-hover:hover {
+    background-color: rgba(255, 255, 255, .2) ;
+}
+
+.page-link{
+    color: black;
+}
+
+.fa-chart-bar{
+font-size: 3rem;
+}
+
+.sexUsers i {
+    font-size: 3rem;
+}
+
+.shadowMy {
+    box-shadow: 5px 5px 15px rgb(59, 137, 134);
+}
+
+.diamondCMS{
+    margin-top: -60px;
+}
+
+
+/* panelRight ends home page */
+/* panelRight starts posts */
+.featured-post{
+    transition: background-image 1s;
+}
+
+.featured-post:hover{
+    background-image: linear-gradient(160deg, rgba(0, 110, 255, .25) 0%, rgba(9, 255, 0, 0.25) 100%);
+}
+
+.userCard .cardImg{
+    overflow: hidden;
+}
+
+.cardImg img{
+    height: 180px;
+    object-fit: cover;
+    opacity: 0.6;
+    transition: opacity 1s, transform 1s;
+}
+
+.cardImg img:hover{
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* panelRight users starts */
+
+.list-group-item{
+
+}
+
+.list-group-item:hover{
+    background-image: linear-gradient(160deg, rgba(0, 110, 255, .25) 0%, rgba(9, 255, 0, 0.25) 100%) !important;
+}

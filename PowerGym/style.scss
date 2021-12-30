@@ -1,0 +1,770 @@
+$white: rgba(242,242,242, 1);
+$greyOne: rgba(191,191,191, 1);
+$greyTwo: rgba(114,114,114, 1);
+$darkOne: rgba(38,38,38, 1);
+$darkTwo: rgba(12,12,12, 1);
+    
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+    }
+   
+
+html {
+    font-size: 62.5%;
+    }
+    
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: $white;
+    font-size: 1.6rem;
+    }
+
+.opacity{
+    opacity: 0.8;
+}
+    
+
+.hero-shadow {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: -1;
+}
+    
+.additional-text {
+    font-size: 1.8rem;
+}
+
+.top-hero{
+    position: relative;
+    height: 40rem;
+    background-size: cover;
+    z-index: 0;
+}
+
+.top-hero-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    z-index: 1;
+    color: $white;
+}
+
+.kenburns-bottom {
+	-webkit-animation: kenburns-bottom 5s ease-out both;
+	        animation: kenburns-bottom 5s ease-out both;
+}
+
+.wobble-hor-bottom {
+	-webkit-animation: wobble-hor-bottom 0.8s infinite both;
+	        animation: wobble-hor-bottom 0.8s infinite both;
+}
+
+// nav start
+
+.navbar {
+    background-color: $greyTwo;
+    z-index: 3;
+
+    .navbar-brand {
+        color: $white;
+        font-size: 2rem;
+        font-weight: bold;
+        transition: shadow .5s;
+    }
+       
+    
+    .navbar-brand:hover{
+        text-shadow: 0px 0px 5px $white;
+    }
+        
+    
+    .fa-bars{
+        font-size: 2.5rem;
+        color: $white;
+    }
+        
+    
+    .navbar-toggler {
+        color: $white;
+    }
+        
+    
+    .nav-link {
+        color: $white;
+        transition: shadow .5s;
+    }
+        
+    
+    .nav-link:hover {
+        text-shadow: 0px 0px 5px $white;
+    }
+        
+    
+    .active {
+        text-decoration: underline;
+    }
+        
+    
+
+
+}
+       
+// nav end
+// header start
+    
+header {
+    font-size: 2rem;
+
+    .carousel-item {
+        position: relative;
+        height: 400px;
+        background-size: cover;
+        z-index: 0;
+    }
+
+    .carousel-img-one {
+        background-image: url('../img/headerOneMobile.jpg');
+        background-position-x: 30%;
+    }
+    
+    .carousel-img-two {
+        background-image: url('../img/headerTwoMobile.jpg');
+        background-position-x: 90%;
+    }
+    
+    .carousel-img-three {
+        background-image: url('../img/headerThreeMobile.jpg');
+        background-position-x: 50%;
+    }
+
+    .carousel-text {
+        color: $white;
+    }
+}
+
+// header end
+// main home start
+
+.mainOne {
+    margin-top: 1em;
+
+    .main-card {
+        margin-top: 2em;
+        padding: 1em;
+        transition: transform .5s;
+
+        .fas {
+            font-size: 3rem;
+            padding: .5em;
+            color: $darkOne;
+            transition: transform 2s;
+        }
+
+        .display-5 {
+            color: $darkTwo;
+            text-transform: uppercase;
+        }
+
+        .card-text {
+            color: $darkTwo;
+        }
+    }
+
+    .main-card:hover {
+        transform: scale(1.1);
+    }
+
+    .main-card:hover .fas {
+        transform: rotate(360deg);
+    }
+}
+
+.mainTwo {
+    margin-top: 3em;
+    z-index: -2;
+    overflow: hidden;
+    background-image: url('../img/mainMobile.jpg');
+    background-size: cover;
+    background-position-x: 50%;
+    height: 500px;
+
+    .mainTwoText {
+        z-index: 1;
+        color: $white;
+        transform: translateX(10%)
+    }
+
+    .mainTwoText p:first-child {
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+
+    .mainTwoText p:last-child {
+        font-size: 2rem;
+    }
+
+}
+
+.mainThree {
+    color: $darkTwo;
+
+    .mainThreeBoxOne{
+        text-align: justify;
+    }
+
+    .mainThreePhoto {
+        overflow: hidden;
+        position: relative;
+        background-image: url('../img/mainThree.jpg');
+        background-position-x: 50%;
+        z-index: -2;
+        padding: 0;
+        height: 400px;
+    }
+
+    .mainThreeBoxTwo {
+        background-color: $greyOne;
+    }
+
+    .mainThreeBoxThree {
+        text-align: justify;
+    }
+
+}
+                    
+// main home end
+// main about us start
+
+.aboutUsOne {
+
+    .top-hero{
+        background-image: url('../img/aboutUsHeroMobile.jpg');
+        background-position-x: 50%;
+    }
+
+    .candy{
+        color: $darkTwo;
+        text-align: justify;
+
+        i {
+            color: $darkOne;
+            transition: transform 1s;
+        }
+    }
+
+    .candy:hover i{
+        transform: rotate(360deg);
+    }
+
+}
+
+.aboutUsTwo {
+        
+    .passion {
+        text-align: justify;
+    }
+    
+    .athlete {
+        background-image: url('../img/athelete.jpg');
+        height: 350px;
+        background-position-x: 50%;
+        background-position-y: 70%;
+    }
+
+    .goal {
+        text-align: justify;
+    }
+}
+
+
+
+.aboutUsThree {
+    margin: 6em;
+
+    .fa-syringe {
+        transition: transform 1s;
+    }
+
+    .cardUsThree {
+        transition: transform .5s;
+        margin: 1em;
+
+        .cardI {
+            font-size: 4rem;
+        }
+
+        .cardText {
+            text-align: justify;
+        }
+    }
+
+    .cardUsThree:hover {
+        transform: scale(1.15);
+    }
+}
+
+.aboutUsThree:hover i{
+    transform: rotate(360deg);
+}
+
+.aboutUsThree .cardUsThree:nth-child(even) {
+    background-color: $greyOne;
+}
+
+.aboutUsThree .cardUsThree:nth-child(odd) {
+    border: solid 1px $greyTwo;
+}
+
+// main about us end
+
+// main offer start
+
+.offerOne {
+
+    .top-hero {
+        background-image: url('../img/offerHeroMobile.jpg');
+        background-position-y: 90%;
+        background-position-x: 50%;
+    }
+
+}
+
+.offerAccordion {
+
+    .accordion-item {
+        background-color: $white;
+        padding: 0;
+
+        .accordingImg {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            filter: brightness(.3);
+        }
+
+        .accordingImgOne {
+            background-image: url('../img/itemOne.jpg');
+            background-position: 60% 20%;
+        }
+        .accordingImgTwo {
+            background-image: url('../img/itemTwo.jpg');
+            background-position: 60% 40%;
+        }
+        .accordingImgThree {
+            background-image: url('../img/itemThree.jpg');
+            background-position: 60% 20%;
+        }
+        .accordingImgFour {
+            background-image: url('../img/itemFour.jpg');
+            background-position: 30% 20%;
+        }
+
+        .accordion-button {
+            background-color: $white;
+            border-color: $greyOne;
+            box-shadow: none;
+            color: $darkTwo;
+            font-size: 2rem;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .accordion-body {
+            text-align: justify;
+        }
+
+        .btn-secondary{
+            display: flex;
+            align-items: center;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 1.2rem;
+        }
+        
+    }
+}
+// main offer end
+
+// main pricing start
+
+.pricingOne{
+    .top-hero{
+        background-image: url('../img/pricingMobile.jpg');
+    }
+
+    .offer p:nth-child(2n) {
+        text-align: justify;
+        margin: 1em;
+    }
+}
+
+.pricingTwo {
+
+    .membership p:nth-child(2n) {
+        text-align: justify;
+        margin: 1em;
+    }
+
+    .pricingContainer {
+
+        .card {
+            transition: transform .5s;
+        }
+
+        .card-header {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .card-header-grey {
+            background-color: $greyTwo;
+            color: $white;
+        }
+
+        .card-title{
+            font-size: 1.7rem;
+
+            span {
+                font-weight: bold;
+                font-size: 3rem;
+            }
+        }
+
+        .btn {
+            display: flex;
+            width: 75%;
+            margin: 20px auto 20px;
+            justify-content: center;
+            border-radius: 20px;
+        }
+
+    }
+
+    .pricingContainer .card:hover {
+        transform: scale(1.1);
+    }
+
+}
+
+
+// main pricing end
+
+// contact start
+
+.contactOne {
+    .top-hero {
+       background-image: url('../img/contactMobile.jpg');
+       background-position-x: 50%;
+       background-position-y: 10%;
+    }
+}
+
+.contactTwo {
+    
+    .btn {
+        color: $white;
+        border-radius: 10px;
+    }
+}
+
+
+// contact end
+
+// footer start
+
+footer {
+    background-color: $darkOne;
+    color: $white;
+}
+
+// footer end
+
+// media
+
+@media(min-width:768px) {
+    header {
+        .carousel-item {
+            height: 600px;
+        }
+    
+        .carousel-img-one {
+            background-position-x: 0%;
+        }
+        
+        .carousel-img-two {
+            background-position-x: 100%;
+            background-position-y: 100%;
+        }
+        
+        .carousel-img-three {
+            background-position-x: 50%;
+        }
+    }
+
+    .mainTwo {
+        height: 600px;
+    
+        .mainTwoText p:first-child {
+            text-transform: uppercase;
+            font-size: 3rem;
+        }
+    
+        .mainTwoText p:last-child {
+            font-size: 1.8rem;
+        }
+    
+    }
+
+    .aboutUsOne {
+
+        .top-hero{
+            background-image: url('../img/aboutUsHeroDesktop.jpg');
+            background-position-y: 50%;
+        }
+    
+        .candy{
+            font-size: 2rem;
+        }
+    
+    }
+
+    .offerOne {
+
+        .top-hero {
+            background-image: url('../img/offerHeroDesktop.jpg');
+            background-position-y: 70%;
+            background-position-x: 50%;
+        }
+
+        .offer {
+            font-size: 2rem;
+            text-align: justify;
+        }
+    
+    }
+
+    .contactOne {
+        .top-hero {
+           background-image: url('../img/contactDektop.jpg');
+           background-position-x: 50%;
+           background-position-y: 10%;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+.nav-link {
+    font-size: 1.6rem; 
+        }
+header {
+    .carousel-item {
+        height: 700px;
+            }
+        
+    .carousel-img-one {
+        background-image: url('../img/headerOneDesktop.jpg');
+        background-position-y: 50%;
+            }
+            
+    .carousel-img-two {
+        background-image: url('../img/headerTwoDesktop.jpg');
+        background-position-y: 50%;
+            }
+            
+    .carousel-img-three {
+        background-image: url('../img/headerThreeDesktop.jpg');
+        background-position-y: 30%;
+            }
+        }
+
+.mainTwo {
+    background-image: url('../img/mainDesktop.jpg');
+    height: 700px;
+    background-position-y: 30%;
+        
+    .mainTwoText p:first-child {
+        text-transform: uppercase;
+        font-size: 3rem;
+        }
+        
+    .mainTwoText p:last-child {
+        font-size: 2.5rem;
+        }
+        
+    }
+
+.aboutUsOne {
+
+    .top-hero-text{
+        font-size: 5rem;
+    }
+
+    .top-hero{
+        height: 50rem;
+    }
+    
+    }
+
+.aboutUsTwo {
+
+    height: 500px;
+    font-size: 2rem;
+    overflow: hidden;    
+    .passion {
+        transform: skewX(-10deg);
+    }
+    
+    .athlete {
+        background-image: url('../img/athelete.jpg');
+        background-position-y: 35%;
+        height: 500px;
+        transform: skewX(-10deg);
+    }
+    
+    .goal {
+        transform: skewX(-10deg);
+    }
+}
+
+.offerOne {
+
+    .top-hero {
+        background-image: url('../img/offerHeroDesktop.jpg');
+        background-position-y: 50%;
+
+        .top-hero-text {
+            font-size: 6rem;
+        }
+    }
+
+    .offer {
+        font-size: 2rem;
+        text-align: justify;
+    }
+
+}
+
+}
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-10-16 23:30:36
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation kenburns-bottom
+ * ----------------------------------------
+ */
+ @-webkit-keyframes kenburns-bottom {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 84%;
+              transform-origin: 50% 84%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translateY(15px);
+              transform: scale(1.25) translateY(15px);
+      -webkit-transform-origin: bottom;
+              transform-origin: bottom;
+    }
+  }
+
+  @keyframes kenburns-bottom {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 84%;
+              transform-origin: 50% 84%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translateY(15px);
+              transform: scale(1.25) translateY(15px);
+      -webkit-transform-origin: bottom;
+              transform-origin: bottom;
+    }
+  }
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-10-20 19:56:10
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation wobble-hor-bottom
+ * ----------------------------------------
+ */
+ @-webkit-keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+  @keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+}
