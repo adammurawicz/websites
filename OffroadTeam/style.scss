@@ -1,0 +1,831 @@
+// my colors
+$myGreen: #8C7B26;
+$myDarkBrown: #40352C;
+$myBrown: #8C6954;
+$myLightBrown: #D9A78B;
+$myCreamy: #F2CEAE;
+$myWhite: #eee;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: $myWhite;
+    position: relative;
+    font-size: 62.5%;
+}
+
+.opacity {
+    opacity: .9;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.section_title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.underline {
+    width: 20%;
+    height: 4px;
+    background-color: $myDarkBrown;
+    margin: 0 auto 40px;
+}
+
+section {
+    padding-top: 100px;
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: 1;
+}
+// nav start
+
+nav {
+    background-color: $myDarkBrown;
+    text-transform: uppercase;
+    
+    .navbar-brand{
+        color: $myWhite;
+        font-size: 1rem;
+        
+        .fa-truck-monster{
+            font-size: 1.5rem;
+            color: $myGreen;
+        }
+    }
+    
+    .navbar-toggler:hover {
+        box-shadow: none;
+    }
+    
+    .fa-bars {
+        color: $myWhite;
+        font-size: 1.5rem;
+    }
+
+    .nav-link {
+        color: $myWhite;
+        text-decoration: none;
+        font-size: .8rem;
+        position: relative;
+        margin-top: .5em;
+        margin-bottom: .5em;
+    }
+
+    .nav-link:hover {
+        color: $myWhite;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+        
+    nav {
+        .navbar-brand{
+            font-size: 1.5rem;
+        
+            .fa-truck-monster{
+                font-size: 2rem;
+            }
+        }
+    
+        .fa-bars {
+            font-size: 2rem;
+        }
+
+        .nav-link {
+            font-size: 1.2rem;
+            margin-top: .8em;
+            margin-bottom: .8em;
+        }
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+        
+    nav {
+        .navbar-brand{
+            font-size: 1.3rem;
+            transition: color .3s;
+        
+            .fa-truck-monster{
+                font-size: 2.2rem;
+            }
+        }
+
+        .navbar-brand:hover {
+            color: $myGreen;
+        }
+
+        .nav-link {
+            padding: 0.2em;
+            font-size: 1rem;
+            margin-left: 1.2em;
+            overflow: hidden;
+        }
+
+        .nav-link::after {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 200px;
+            height: 50px;
+            transform: skewX(-45deg);
+            background-color: $myGreen;
+            z-index: 99;
+            left: -250px;
+            top: -10px;
+            transition: left 1s;
+            opacity: .3;
+        }
+        
+        .nav-link:hover::after {
+            left: -20px;
+        }
+    }
+
+}
+
+// nav end
+
+// header start
+
+.header {
+    position: relative;
+    height: 500px;
+    background-image: url('/img/header_mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    .header_text {
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 90%;
+        color: $myWhite;
+        z-index: 2;
+
+        span {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .fa-truck-monster {
+            font-size: 2rem;
+            color: $myGreen;
+        }
+
+        .btn {
+            padding: 3px 12px;
+        }
+    }
+    
+            .fa-arrow-circle-down {
+                position: absolute;
+                bottom: 5%;
+                left: 49%;
+                transform: translateX(-50%);
+                z-index: 3;
+                font-size: 1.5rem;
+                color: $myWhite;
+            }
+}
+
+@media screen and (min-width: 768px) {
+    
+.header {
+    height: 600px;
+    background-image: url('/img/header_desktop.jpg');
+
+    .header_text {
+        .fa-truck-monster {
+            font-size: 2.5rem;
+        }
+        .btn {
+            padding: 7px 22px;
+        }
+     }
+    }
+
+    .fa-arrow-circle-down {
+        bottom: 10%;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    
+    .header {
+        height: 800px;
+        background-image: url('/img/header_desktop.jpg');
+    
+        .header_text {
+
+            .header_hearing {
+                font-size: 2.5rem;
+
+                span {
+                    letter-spacing: 5px;
+                }
+            }
+            .fa-truck-monster {
+                font-size: 3rem;
+                margin-bottom: .5em;
+            }
+
+            .header_paragraph {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 10px 50px;
+                font-size: 1.2rem;
+            }
+        }
+
+        .fa-arrow-circle-down {
+            display: block;
+            bottom: 10%;
+            font-size: 2.5rem;
+        }
+         
+    }
+}
+
+// header end
+
+// main start
+// aboutUs start
+
+.aboutUs {
+    color: $myDarkBrown;
+
+    .aboutUs_card .fas {
+        margin-top: 20px;
+        font-size: 2rem;
+    }
+    
+    .aboutUs_card {
+        padding: 15px;
+        transition: transform .3s;
+    }
+    
+    
+    .aboutUs_card_title, .love_card_title {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+    
+    .aboutUs_card_text, .love_card_text {
+        font-size: 1rem;
+    }
+    
+    .love {
+        position: relative;
+        padding-bottom: 10em;
+        background-image: url('/img/aboutUs_desktop.jpg');
+        background-size: cover;
+        background-position-y: 30%;
+        background-position-x: 30%;
+        background-attachment: fixed;
+        color: $myWhite;
+
+        .fa-heart {
+            color: $myGreen;
+            font-size: 2.5rem;
+        }
+    
+        .love_card, .love_title {
+            position: relative;
+            z-index: 2;
+            padding: 0.3em;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .aboutUs {
+    
+        .fa-heart {
+        }
+    
+        .aboutUs_card:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .aboutUs .love {
+        padding-top: 5em;
+        padding-bottom: 1islandia
+        5em;
+    }
+}
+
+// aboutUs end
+
+// travels start
+
+.travels {
+
+    .travelsCards {
+
+        .card {
+            width: 80%;
+            margin: 20px auto;
+            padding: 0;
+            background-color: $myWhite;
+            border: 1px solid grey;
+            box-shadow: 3px 3px 20px 0px rgba(66, 68, 90, 1);
+            
+
+            .card-img-top {
+                width: 100%;
+                margin: 0;
+            }
+
+            .card-body {
+                text-align: center;
+            }
+        }
+    }
+    
+    .travelsCarousel {
+
+        .carousel-indicators {
+            padding-bottom: .5em;
+        }
+    
+        .carousel-inner {
+            height: 500px;
+    
+            img {
+                height: 480px;
+                object-fit: cover;
+            }
+    
+            .carousel-caption {
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                padding-top: 2.5em;
+                padding-bottom: 2.5em;
+                background-color: rgba(0,0,0,.6)
+                
+                h5 {
+                    font-size: 2rem;
+                }
+            }
+    
+        }
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .travels {
+
+        .travelsCarousel {
+
+            .carousel-indicators {
+                padding-bottom: 1em;
+            }
+    
+            .carousel-inner {
+                height: 600px;
+        
+                img {
+                    height: 580px;
+                }
+        
+                .carousel-caption {
+                   
+                    h5 {
+                        font-size: 2.5rem;
+                    }
+    
+                    p {
+                        font-size: 1.1rem;
+                        font-weight: normal;
+                        padding: 0em 1.5em;
+                    }
+                }
+            } 
+
+        }
+        
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .travels {
+
+        .travelsCarousel {
+    
+            .carousel-inner {
+                height: 700px;
+        
+                img {
+                    height: 680px;
+                }
+            } 
+        }
+    }
+}
+
+// travels end
+
+// cars start
+
+.cars {
+    overflow: hidden;
+    margin-bottom: 5em;
+
+    .carsCards {
+        margin: 0px auto;
+        
+        .carCard {
+            margin-top: 50px;
+            border: 1px solid black;
+            background-color: $myWhite;
+            box-shadow: 3px 3px 20px 0px rgba(66, 68, 90, 1);
+            padding: 0;
+            
+            .carTitle {
+                text-align: center;
+                letter-spacing: 3px;
+
+                p {
+                    margin: 5px;
+                    font-size: 1rem;
+                }
+            }
+
+            .carImg {
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                transition: transform .3s;
+                background-color: rgb(92, 99, 106);
+
+                img {
+                    overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform .3s;
+                }
+            }
+
+            .carButton {
+                width: 100%;
+                text-align: center;
+                background-color: $myWhite;
+                margin: 0;
+                padding: 0;
+
+                button {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0;
+                    margin: 0;
+                    padding: .3em;
+                    border: none;
+                }
+            }
+
+        }
+    }
+
+    .carsInfo {
+        margin: 3em auto;
+        text-align: justify;
+        font-size: .8rem;
+
+        span {
+            font-weight: bold;
+            color: $myGreen;
+        }
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .cars {
+
+        .carCard {
+            height: 400px;
+            
+            .carImg {
+                overflow: hidden;
+            }
+    
+    
+            img:hover {
+                transform: scale(1.1);
+            }
+    
+            .carButton {
+                
+                button {
+                    width: 50px;
+                }
+            }
+        }
+
+        .carsInfo {
+            margin: 4em auto;
+            text-align: justify;
+            font-size: 1rem;
+        }
+    }
+}
+
+// cars end
+
+// team start
+
+.team {
+    position: relative;
+    background-image: url('/img/teambcg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 15em;
+
+    .team_title {
+        position: relative;
+        z-index: 2;
+
+        .section_title {
+            color: $myWhite;
+        }
+    }
+
+    .team-cards {
+        z-index: 2;
+    }
+
+    .card {
+        height: 400px;
+        background-color: $myWhite;
+        border: none;
+
+        img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+
+            .card-title {
+                text-transform: uppercase;
+            }
+
+            .card-text {
+                text-align: justify;
+                font-size: .8rem;
+            }
+        }
+        
+        .card-footer {
+            height: 35px;
+            font-size: 1rem;
+
+            i{
+                color: $myGreen;
+                transition: color .3s;
+            }
+
+            i:hover {
+                color: $myDarkBrown;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .team {
+        .card {
+            transition: transform .3s;
+        }
+
+        .card:hover {
+            transform: scale(.95);
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .team {
+        .card {
+            height: 500px;
+    
+            img {
+                height: 300px;
+            }
+    
+            .card-body {
+    
+                .card-title {
+                    font-size: 1.5rem;
+                }
+    
+                .card-text {
+                    font-size: 1rem;
+                }
+            }
+            
+            .card-footer {
+                height: 40px;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+// team end
+
+// achievement start
+
+.achievements {
+
+    .achievementCards {
+        margin-top: 10em;
+
+        .cardAchievements {
+            height: 14em;
+            margin-top: 3em;
+            margin-bottom: 3em;
+
+            .fas {
+                font-size: 2.5rem;
+            }
+
+            .score {
+                font-size: 2rem;
+            }
+
+            .text {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .achievements {
+        margin-bottom: 10em;
+
+        .achievementCards {
+            margin-top: 12em;
+    
+            .cardAchievements {
+                height: 22em;
+                margin-top: 4em;
+                margin-bottom: 4em;
+    
+                .fas {
+                    font-size: 3rem;
+                }
+                
+                .score {
+                    font-size: 2.5rem;
+                    color: transparent;
+                    text-shadow: 0 10px 20px #000;
+                    transition: text-shadow .5s, color .5s;
+                }
+                
+                
+                .text {
+                    font-size: 1.6em;
+                }
+            }
+
+            .cardAchievements:hover .score{
+                text-shadow: none;
+                color: transparentize($color: #000000, $amount: 0);
+            }
+        }
+    }
+}
+
+// achievement end
+
+// contact start
+
+.contact {
+    position: relative;
+    overflow: hidden;
+    background-image: url('/img/contactMobile.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 10em;
+
+    .contact-title, .contactItem {
+        position: relative;
+        color: $myWhite;
+        z-index: 2;
+    }
+
+    .contactItem {
+        padding-top: 4em;
+
+        h3 {
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .fab {
+            color: $myGreen;
+            font-size: 1.5rem;
+            margin-top: .5em;
+            padding-right: .6em;
+            padding-left: .6em;
+            transition: color .3s;
+        }
+
+        .fab:hover {
+            color: $myDarkBrown;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .contact {
+        background-image: url('/img/contactDesktop.jpg');
+    
+        .contactItem {
+            padding-top: 5em;
+    
+            p {
+                font-size: 1.2rem;
+            }
+    
+            .fab {
+                font-size: 2rem;
+                margin-top: .8em;
+            }
+        }
+    }  
+}
+
+// contact end
+// main end
+
+// footer start
+
+footer {
+    background-color: $myDarkBrown;
+    color: $myWhite;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 720px) {
+    footer {
+        font-size: 1.2rem;
+    }
+}
+
+// footer end
+
+// animista
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-1-9 19:46:35
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+ .vibrate-1{-webkit-animation:vibrate-1 2.5s linear infinite both;animation:vibrate-1 2.5s linear infinite both}
+ @-webkit-keyframes vibrate-1{0%{-webkit-transform:translate(0);transform:translate(0)}20%{-webkit-transform:translate(-2px,2px);transform:translate(-2px,2px)}40%{-webkit-transform:translate(-2px,-2px);transform:translate(-2px,-2px)}60%{-webkit-transform:translate(2px,2px);transform:translate(2px,2px)}80%{-webkit-transform:translate(2px,-2px);transform:translate(2px,-2px)}100%{-webkit-transform:translate(0);transform:translate(0)}}@keyframes vibrate-1{0%{-webkit-transform:translate(0);transform:translate(0)}20%{-webkit-transform:translate(-2px,2px);transform:translate(-2px,2px)}40%{-webkit-transform:translate(-2px,-2px);transform:translate(-2px,-2px)}60%{-webkit-transform:translate(2px,2px);transform:translate(2px,2px)}80%{-webkit-transform:translate(2px,-2px);transform:translate(2px,-2px)}100%{-webkit-transform:translate(0);transform:translate(0)}}
+
+.bounce-top{-webkit-animation:bounce-top 2s linear infinite both;animation:bounce-top 2s linear infinite both}
+@-webkit-keyframes bounce-top{0%{-webkit-transform:translateY(-45px);transform:translateY(-45px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{-webkit-transform:translateY(-24px);transform:translateY(-24px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}65%{-webkit-transform:translateY(-12px);transform:translateY(-12px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}82%{-webkit-transform:translateY(-6px);transform:translateY(-6px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}93%{-webkit-transform:translateY(-4px);transform:translateY(-4px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}25%,55%,75%,87%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}}@keyframes bounce-top{0%{-webkit-transform:translateY(-45px);transform:translateY(-45px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{-webkit-transform:translateY(-24px);transform:translateY(-24px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}65%{-webkit-transform:translateY(-12px);transform:translateY(-12px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}82%{-webkit-transform:translateY(-6px);transform:translateY(-6px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}93%{-webkit-transform:translateY(-4px);transform:translateY(-4px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}25%,55%,75%,87%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}100%{-webkit-transform:translateY(0);transform:translateY(0);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out;opacity:1}}
+
+.heartbeat{-webkit-animation:heartbeat 3s ease-in-out infinite both;animation:heartbeat 3s ease-in-out infinite both}
+ @-webkit-keyframes heartbeat{from{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:center center;transform-origin:center center;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}10%{-webkit-transform:scale(.91);transform:scale(.91);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}17%{-webkit-transform:scale(.98);transform:scale(.98);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}33%{-webkit-transform:scale(.87);transform:scale(.87);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}45%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}@keyframes heartbeat{from{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:center center;transform-origin:center center;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}10%{-webkit-transform:scale(.91);transform:scale(.91);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}17%{-webkit-transform:scale(.98);transform:scale(.98);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}33%{-webkit-transform:scale(.87);transform:scale(.87);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}45%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}
