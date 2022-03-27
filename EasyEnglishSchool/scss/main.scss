@@ -1,0 +1,730 @@
+$white: #efefef;
+$first: #042940;
+$second: #005C53;
+$third: #9FC131;
+$fourth: #DBF227;
+$fifth: #D6D58E;
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    background-color: $white;
+    font-size: 62.5%;
+}
+
+.active {
+    color: $fourth !important;
+    font-weight: bold;
+}
+
+.shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0, .6);
+    z-index: -1;
+}
+
+.navi-bg {
+    background-color: $first;
+    opacity: .9;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section {
+    padding-top: 8em;
+    overflow: hidden;
+}
+
+.underline {
+    margin: 0 auto 5em;
+    width: 80px;
+    height: 4px;
+    background-color: $fifth;
+}
+
+// nav start
+
+nav {
+    background-color: $first;
+    opacity: .9;
+    transition: background-color .6s;
+    .navbar-brand {
+        color: $fifth;
+        font-size: .7rem;
+        transition: color .3s;
+        
+        i {
+            font-size: 1rem;
+        }
+    }
+
+    .navbar-brand:hover {
+        color: $fourth;
+    }
+    
+    .navbar-toggler {
+        color: $fifth;
+        font-size: 1.2rem;
+        padding: .3em;
+        transition: color .3s;
+    }
+    
+    .navbar-toggler:hover {
+        color: $fourth;
+    }
+    
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    
+    .nav-link {
+        color: $fifth;
+        font-size: 1rem;
+        transition: color .3s;
+    }
+
+    .nav-link:hover {
+        color: $fourth;
+    }
+
+    .nav-link:first-of-type {
+        margin-top: 1em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        .navbar-brand {
+            font-size: 1rem;
+            
+            i {
+                font-size: 1.4rem;
+            }
+        }
+        
+        .navbar-toggler {
+            color: $fifth;
+            font-size: 1.4rem;
+            padding: .5em;
+        }
+        
+        .nav-link {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media screen and (min-width:992px) {
+    nav {
+        background-color: rgba(0,0,0, 0);
+        .navbar-brand {
+            font-size: 1rem;
+            
+            i {
+                font-size: 1.4rem;
+            }
+        }
+        
+        .nav-link {
+            font-size: 1rem;
+        }
+    
+        .nav-link:first-of-type {
+            margin-top: 0;
+        }
+    }
+    
+}
+
+@media screen and (min-width:1200px) {
+    nav {
+
+        .navbar-brand {
+            font-size: 1.2rem;
+            
+            i {
+                font-size: 1.6rem;
+            }
+        }
+        
+        .nav-link {
+            font-size: 1.1rem;
+        }
+    }   
+}
+// nav end
+
+// header start
+
+header {
+    height: 100vH;
+    width: 100%;
+    background-image: url('/img/headermobile.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+
+    .header-text {
+        position: absolute;
+        z-index: 3;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        color: $fifth;
+        text-align: center;
+
+        .header-title {
+            font-size: 1rem;
+        }
+
+        .fa-graduation-cap {
+            font-size: 1.6rem;
+        }
+        
+        .btn {
+            background-color: rgba(255,255,255,.4);
+            border: 1px solid $fifth;
+            color: $fifth;
+            padding: .2em 1em;
+            margin-top: 1em;
+            transition: border .3s, color .3s;
+        }
+        
+        .btn:hover {
+            border: 1px solid $fourth;
+            color: $fourth;
+        }
+    }
+
+    .fa-angle-down {
+        position: absolute;
+        z-index: 2;
+        bottom: .5em;
+        left: 48%;
+        color: $fifth;
+        transform: translateX(-50%);
+        font-size: 2.5rem;
+        padding: 1em;
+        transition: color .3s;
+    }
+
+    .fa-angle-down:hover {
+        color: $fourth;
+    }
+}
+
+@media screen and (min-width:576px)  {
+    header {
+        .header-text {
+
+            .header-title {
+                font-size: 1.4rem;
+            }
+    
+            .fa-graduation-cap {
+                font-size: 1.8rem;
+            }
+
+                    
+        .btn {
+            padding: .2em 3em;
+        }
+        }
+    }
+}
+
+@media screen and (min-width:768px)  {
+    header {
+        .header-text {
+
+            .header-title {
+                font-size: 1.6rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+    
+            .fa-graduation-cap {
+                font-size: 2rem;
+            }
+
+            .btn {
+                padding: .5em 3em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:992px)  {
+    header {
+        background-image: url('/img/headerdesktop.jpg');
+        .header-text {
+
+            .header-title {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+    
+            .fa-graduation-cap {
+                font-size: 2rem;
+            }
+
+            .btn {
+                padding: .5em 5em;
+            }
+        }
+    }
+}
+
+// header end
+
+// aboutsUs start
+
+.aboutUs {
+    color: $first;
+
+    .aboutUs-card {
+        transition: color .3s;
+        
+        i {
+            margin-top: 2em;
+            font-size: 2.3rem;
+            
+        }
+    
+        .aboutUs-card-title {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+        }
+    
+        .aboutUs-card-text {
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+    }
+
+    .aboutUs-card:hover {
+        color: $second;
+    }
+}
+
+.aboutUs-hero {
+    position: relative;
+    margin-top: 5em;
+    background-image: url('/img/aboutUsHeroMobile.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    padding-top: 3em;
+    padding-bottom: 8em;
+
+    .container {
+        margin-top: 7em;
+    }
+
+    h3 {
+        color: $fifth;
+        z-index: 3;
+    }
+
+    .underline {
+        z-index: 3;
+    }
+
+    .aboutUs-hero-card {
+        margin-top: 2em;
+        color: $fifth;
+        z-index: 3;
+        text-align: center;
+
+        i {
+            font-size: 2.2rem;
+        }
+
+        p:nth-of-type(2) {
+            font-size: 1.3rem;
+        }
+
+        p:nth-of-type(3) {
+            font-size: .9rem;
+        }
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    background-image: url('/img/aboutUsHeroDesktop.jpg');
+}
+
+// aboutsUs end
+
+// clasroom start
+
+.classroom {
+
+    .carousel-item {
+        position: relative;
+        max-height: 700px;
+        
+        img{
+           object-fit: fill;
+           
+        }
+
+        .shadow {
+            z-index: 1;
+        }
+
+        .carousel-caption {
+            z-index: 2;
+        }
+    }
+
+    .classroom-card {
+        img {
+            width: 95%;
+            margin-right: 1em;
+            margin-left: 1em;
+        }
+        
+        .classroom-card-text {            
+            margin-right: 1em;
+            margin-left: 1em;
+            text-align: center;
+            color: $first;
+
+            h4 {
+                margin-top: .5em;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .carousel-item {
+        h5 {
+            font-size: 1.6rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+// clasroom end
+
+// pricing-start
+
+.pricing {
+    color: $first;
+    padding-bottom: 3em;
+
+    .course-box {
+        padding: 3em 1.5em;
+        border-right: 1px solid $first;
+        border-bottom: 1px solid $first;
+        -webkit-box-shadow: 12px 14px 24px 0px rgba(4, 41, 64, 1);
+        -moz-box-shadow: 12px 14px 24px 0px rgba(4, 41, 64, 1);
+        box-shadow: 12px 14px 24px 0px rgba(4, 41, 64, 1);
+        transition: transform .3s;
+        // width: 200px;
+    }
+
+    .course-box:hover {
+        transform: scale(.95);
+    }
+
+    .card-line{
+        margin: 0 auto 1em;
+        width: 80%;
+        height: 1px;
+        background-color: $third;
+    }
+
+    .course-info {
+        font-size: .9rem;
+    }
+
+    .course-info:last-of-type {
+        color: $third;
+        font-weight: bold;
+    }
+
+    .pricing-btn {
+        padding: .3em .8em;
+        border-radius: 10px;
+        font-size: .8rem;
+        border: 2px solid $third;
+        cursor: pointer;
+        transition: background-color .3s, color .3s;
+    }
+
+    .btn-extra {
+        color: $third;
+        font-weight: bold;
+    }
+    
+    .pricing-btn:hover {
+        background-color: $third;
+        color: $white;
+    }
+
+    .pricing-info {
+        text-align: justify;
+        font-size: 0.7rem;
+    }
+
+    .pricing-info-span-one {
+        text-decoration: underline;
+        font-size: 0.8rem;
+
+        a {
+            color: $first;
+        }
+    }
+
+    .pricing-info-span-two {
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .pricing {
+    
+        .course-info {
+            font-size: 1rem;
+        }
+    
+        .pricing-btn {
+            padding: .4em 1em;
+            font-size: .9rem;
+        }
+    
+        .pricing-info {
+            font-size: 0.9rem;
+        }
+    
+        .pricing-info-span-one {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .pricing {
+    
+        .course-info {
+            font-size: 1.1rem;
+        }
+    
+        .pricing-btn {
+            padding: .5em 1.1em;
+            font-size: 1rem;
+        }
+    
+        .pricing-info {
+            font-size: 1rem;
+        }
+    
+        .pricing-info-span-one {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+// pricing-end
+
+// teachers start
+
+.teachers {
+    color: $first;
+    padding-bottom: 5em;
+    background-image: url('../img/teachers-header-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 10%;
+    position: relative;
+    z-index: 1;
+
+    h2 {
+        color: $white;
+    }
+
+    .teachers-card {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        margin-left: 1em;
+        margin-right: 1em;
+        text-align: center;
+        padding: 0;
+        background-color: $white;
+        transition: transform .3s;
+    }
+
+    .teachers-card:hover {
+        transform: scale(.95);
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .teachers-card-text {
+        margin-top: 1em;
+        font-size: 1rem;
+        padding: .5em;
+    }
+    
+    .teachers-card-social {
+        background-color: rgba(0,0,0, .1);
+        width: 100%;
+        i {
+            padding: .5em 1em;
+            font-size: 1.2rem;
+            color: $third;
+            transition: color .3s;
+        }
+
+        i:hover {
+            color: $first;
+        }
+    }
+}
+
+// teachers end
+
+// achievements start
+
+.achievements {
+    margin-bottom: 7em;
+    
+    .achiev-card {
+        color: $first;
+
+        i {
+            font-size: 2rem;
+            padding: 1em;
+        }
+
+        p:nth-of-type(1) {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        p:nth-of-type(2) {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    
+.achievements {
+    .achiev-card {
+
+        p:nth-of-type(1) {
+            filter: blur(.3rem);
+            transition: filter .3s;
+        }
+    }
+
+    .achiev-card:hover p:nth-of-type(1) {
+        filter: none;
+    }
+}
+}
+
+// achievements end
+
+// contact start
+
+.contact {
+    position: relative;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    background-image: url('../img/teachers-header-mobile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 90%;
+    z-index: 1;
+    color: $white;
+
+    h3 {
+        margin-bottom: 1em;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    i {
+        font-size: 1.3rem;
+        padding: .2em .6em;
+        color: $fifth;
+        transition: color .3s;
+    }
+
+    i:hover {
+        color:$fourth;
+    }
+}
+
+
+// contact end 
+
+// footer start
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $first;
+    height: 40px;
+    color: $white;
+    font-size: 0.9rem;
+    
+    p {
+        margin: 0;
+    }
+}
+
+// footer end 
+
+// animaista
+
+.shake-vertical{-webkit-animation:shake-vertical 1.2s cubic-bezier(.455,.03,.515,.955) infinite both; animation:shake-vertical 1.2s cubic-bezier(.455,.03,.515,.955) infinite both}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-3-27 21:8:4
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+ @-webkit-keyframes shake-vertical{0%,100%{-webkit-transform:translateY(0);transform:translateY(0)}10%,30%,50%,70%{-webkit-transform:translateY(-8px);transform:translateY(-8px)}20%,40%,60%{-webkit-transform:translateY(8px);transform:translateY(8px)}80%{-webkit-transform:translateY(6.4px);transform:translateY(6.4px)}90%{-webkit-transform:translateY(-6.4px);transform:translateY(-6.4px)}}@keyframes shake-vertical{0%,100%{-webkit-transform:translateY(0);transform:translateY(0)}10%,30%,50%,70%{-webkit-transform:translateY(-8px);transform:translateY(-8px)}20%,40%,60%{-webkit-transform:translateY(8px);transform:translateY(8px)}80%{-webkit-transform:translateY(6.4px);transform:translateY(6.4px)}90%{-webkit-transform:translateY(-6.4px);transform:translateY(-6.4px)}}
