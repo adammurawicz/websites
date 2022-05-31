@@ -168,7 +168,7 @@ nav {
 .header {
     position: relative;
     height: 500px;
-    background-image: url('/img/header_mobile.jpg');
+    background-image: url('../img/header_mobile.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -213,7 +213,7 @@ nav {
     
 .header {
     height: 600px;
-    background-image: url('/img/header_desktop.jpg');
+    // background-image: url('../img/header_desktop.jpg');
 
     .header_text {
         .fa-truck-monster {
@@ -235,7 +235,7 @@ nav {
     
     .header {
         height: 800px;
-        background-image: url('/img/header_desktop.jpg');
+        background-image: url('../img/header_desktop.jpg');
     
         .header_text {
 
@@ -301,7 +301,7 @@ nav {
     .love {
         position: relative;
         padding-bottom: 10em;
-        background-image: url('/img/aboutUs_desktop.jpg');
+        background-image: url('../img/aboutUs_desktop.jpg');
         background-size: cover;
         background-position-y: 30%;
         background-position-x: 30%;
@@ -567,7 +567,7 @@ nav {
 
 .team {
     position: relative;
-    background-image: url('/img/teambcg.jpg');
+    background-image: url('../img/teambcg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -737,7 +737,7 @@ nav {
 .contact {
     position: relative;
     overflow: hidden;
-    background-image: url('/img/contactMobile.jpg');
+    background-image: url('../img/contactMobile.jpg');
     background-size: cover;
     background-attachment: fixed;
     padding-bottom: 10em;
@@ -776,7 +776,7 @@ nav {
 
 @media screen and (min-width: 992px) {
     .contact {
-        background-image: url('/img/contactDesktop.jpg');
+        background-image: url('../img/contactDesktop.jpg');
     
         .contactItem {
             padding-top: 5em;
