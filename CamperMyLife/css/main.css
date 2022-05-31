@@ -228,7 +228,7 @@ nav a:hover, nav .nav-link:hover {
 .header {
   position: relative;
   height: 100vH;
-  background-image: url("/img/headerMobile.jpg");
+  background-image: url("../img/headerMobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 70%;
@@ -310,7 +310,7 @@ nav a:hover, nav .nav-link:hover {
 
 .about-us-hero {
   position: relative;
-  background-image: url("/img/heroMobile.jpg");
+  background-image: url("../img/heroMobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 60%;
@@ -380,7 +380,7 @@ nav a:hover, nav .nav-link:hover {
 
 .ourvehicles {
   position: relative;
-  background-image: url("/img/desert.jpg");
+  background-image: url("../img/desert.jpg");
   z-index: 0;
 }
 
@@ -531,7 +531,7 @@ nav a:hover, nav .nav-link:hover {
 
 .contact {
   position: relative;
-  background-image: url("/img/concatc.jpg");
+  background-image: url("../img/concatc.jpg");
   background-size: cover;
   background-position-y: 50%;
   z-index: 0;
@@ -573,7 +573,7 @@ nav a:hover, nav .nav-link:hover {
 @media (min-width: 768px) {
   .header {
     height: 100vH;
-    background-image: url("/img/headerDesktop.jpg");
+    background-image: url("../img/headerDesktop.jpg");
   }
   .header .headerText {
     padding: 5em;
@@ -600,7 +600,7 @@ nav a:hover, nav .nav-link:hover {
     font-size: 2.5rem;
   }
   .about-us-hero {
-    background-image: url("/img/heroDesktop.jpg");
+    background-image: url("../img/heroDesktop.jpg");
     background-position-y: 80%;
   }
   .about-us-hero .about-us-hero-title {
@@ -682,7 +682,7 @@ nav a:hover, nav .nav-link:hover {
     font-size: 3.5rem;
   }
   .about-us-hero {
-    background-image: url("/img/heroDesktop.jpg");
+    background-image: url("../img/heroDesktop.jpg");
     background-position-y: 90%;
   }
   .about-us-hero .about-us-hero-card {
