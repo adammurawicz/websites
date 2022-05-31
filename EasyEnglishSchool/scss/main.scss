@@ -174,7 +174,7 @@ nav {
 header {
     height: 100vH;
     width: 100%;
-    background-image: url('/img/headermobile.jpg');
+    background-image: url('../img/headermobile.jpg');
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -274,7 +274,7 @@ header {
 
 @media screen and (min-width:992px)  {
     header {
-        background-image: url('/img/headerdesktop.jpg');
+        background-image: url('../img/headerdesktop.jpg');
         .header-text {
 
             .header-title {
@@ -331,7 +331,7 @@ header {
 .aboutUs-hero {
     position: relative;
     margin-top: 5em;
-    background-image: url('/img/aboutUsHeroMobile.jpg');
+    background-image: url('../img/aboutUsHeroMobile.jpg');
     background-size: cover;
     background-attachment: fixed;
     z-index: -1;
@@ -373,7 +373,7 @@ header {
 }
 
 @media screen and (min-width: 992px) {
-    background-image: url('/img/aboutUsHeroDesktop.jpg');
+    background-image: url('../img/aboutUsHeroDesktop.jpg');
 }
 
 // aboutsUs end
