@@ -373,7 +373,9 @@ header {
 }
 
 @media screen and (min-width: 992px) {
-    background-image: url('../img/aboutUsHeroDesktop.jpg');
+    .aboutUs-hero {
+        background-image: url('../img/aboutUsHeroDesktop.jpg');
+    }
 }
 
 // aboutsUs end
@@ -614,6 +616,12 @@ header {
         i:hover {
             color: $first;
         }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .teachers {
+        background-image: url('../img/teachers-header-mobile.jpg');
     }
 }
 

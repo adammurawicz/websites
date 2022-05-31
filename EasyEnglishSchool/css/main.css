@@ -331,7 +331,9 @@ header .fa-angle-down:hover {
 }
 
 @media screen and (min-width: 992px) {
-  background-image: url("../img/aboutUsHeroDesktop.jpg");
+  .aboutUs-hero {
+    background-image: url("../img/aboutUsHeroDesktop.jpg");
+  }
 }
 
 .classroom .carousel-item {
@@ -550,6 +552,12 @@ header .fa-angle-down:hover {
 
 .teachers .teachers-card-social i:hover {
   color: #042940;
+}
+
+@media screen and (min-width: 768px) {
+  .teachers {
+    background-image: url("../img/teachers-header-mobile.jpg");
+  }
 }
 
 .achievements {
