@@ -143,7 +143,7 @@ nav .nav-link:hover {
 .header {
   position: relative;
   height: 500px;
-  background-image: url("/img/header_mobile.jpg");
+  background-image: url("../img/header_mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -189,7 +189,6 @@ nav .nav-link:hover {
 @media screen and (min-width: 768px) {
   .header {
     height: 600px;
-    background-image: url("/img/header_desktop.jpg");
   }
   .header .header_text .fa-truck-monster {
     font-size: 2.5rem;
@@ -206,7 +205,7 @@ nav .nav-link:hover {
 @media screen and (min-width: 992px) {
   .header {
     height: 800px;
-    background-image: url("/img/header_desktop.jpg");
+    background-image: url("../img/header_desktop.jpg");
   }
   .header .header_text .header_hearing {
     font-size: 2.5rem;
@@ -261,7 +260,7 @@ nav .nav-link:hover {
 .aboutUs .love {
   position: relative;
   padding-bottom: 10em;
-  background-image: url("/img/aboutUs_desktop.jpg");
+  background-image: url("../img/aboutUs_desktop.jpg");
   background-size: cover;
   background-position-y: 30%;
   background-position-x: 30%;
@@ -468,7 +467,7 @@ nav .nav-link:hover {
 
 .team {
   position: relative;
-  background-image: url("/img/teambcg.jpg");
+  background-image: url("../img/teambcg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -612,7 +611,7 @@ nav .nav-link:hover {
 .contact {
   position: relative;
   overflow: hidden;
-  background-image: url("/img/contactMobile.jpg");
+  background-image: url("../img/contactMobile.jpg");
   background-size: cover;
   background-attachment: fixed;
   padding-bottom: 10em;
@@ -652,7 +651,7 @@ nav .nav-link:hover {
 
 @media screen and (min-width: 992px) {
   .contact {
-    background-image: url("/img/contactDesktop.jpg");
+    background-image: url("../img/contactDesktop.jpg");
   }
   .contact .contactItem {
     padding-top: 5em;
