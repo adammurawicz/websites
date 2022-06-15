@@ -1,0 +1,501 @@
+@import 'colors';
+@import 'animate';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background-color: $myWhite;
+}
+
+.logo_span {
+    color: $first;
+    font-weight: bold;
+    font-size: 130%;
+}
+
+.hero {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+section {
+    padding-top: 6em;
+}
+
+h2 {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.underline {
+    position: relative;
+    margin: 0 auto 2em;
+    width: 60px;
+    height: 4px;
+    background-color: $first;
+    z-index: 2;
+}
+
+
+// nav start
+
+.navbackground {
+    background-color: $second;
+    opacity: .95;
+}
+
+nav {
+    background-color: $second;
+    opacity: .95;
+    z-index: 3;
+    transition: background 1s, opascity 1s;
+
+    .navbar-brand {
+        color: $myWhite;
+        transition: color .3s;
+    }
+
+    .navbar-brand:hover {
+        color: $first;
+    }
+
+    .navbar-toggler {
+        color: $myWhite;
+        padding: .2em;
+        border: none;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        
+        .nav-link {
+            color: $myWhite;
+            transition: color .3s;
+        }
+
+        .nav-link:hover {
+            color: $first;
+        }
+    }
+
+    .navbar-nav .nav-link.active {
+        color: $first;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    nav {
+        background-color: $opacity;
+        .nav-link {
+                font-size: 1.1rem;
+        }
+    }
+    
+}
+
+// nav end
+
+// header start
+
+header {
+    background-attachment: fixed;
+    background-image: url('../img/headerMobile.jpg');
+    height: 100vH;
+    
+    .header_container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 2;
+        color: $myWhite;
+        text-align: center;
+        
+        .header_text {
+            font-size: 1.2rem;
+        }
+
+        .header_btn {
+            position: absolute;
+            padding: 2em;
+            color: $myBlack;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .fa-angle-down {
+        position: absolute;
+        color: $myWhite;
+        bottom: 10%;
+        left: 49%;
+        transform: translateX(-50%);
+        font-size: 1.5rem;
+        padding: 1em;
+        z-index: 2;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    header {
+        background-image: url('../img/headerDesktop.jpg');
+    }
+}
+
+// header end
+
+// aboutUs start
+
+.aboutUs {
+
+    .aboutus_info_card {
+        transition: color .3s, transform .5s;
+
+        i {
+            margin-top: 2em;
+            font-size: 2rem;
+        }
+    
+        .aboutus_info_card_title {
+         font-size: 1.4rem;
+         text-transform: uppercase;   
+        }
+    
+        .aboutus_info_card_text{
+            font-size: 1.2rem;
+        }
+    }
+
+    .aboutus_info_card:hover {
+        color: $second;
+        transform: scale(.95);
+    }
+
+    .aboutus_hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 3em;
+        padding: 3em;
+        min-height: 60vH;
+        background-image: url('../img/aboutsusMobile.jpg');
+
+        .aboutus_hero_hearing, .aboutus_hero_card {
+            padding: 2em;
+            position: relative;
+            color: $myWhite;
+            z-index: 2;
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        i {
+           font-size: 2rem;
+           padding: .5em;
+        }
+    
+     .fas-first {
+        color: $first;
+    }
+}
+}
+
+@media screen and (min-width: 992px) {
+    .aboutUs .aboutus_hero {
+        background-image: url('../img/aboutusDesktop.jpg');
+    }
+}
+
+// aboutUs end
+
+// realisations start
+
+.realisations {
+
+    .realisations_small {
+        .realisation_card{
+            border: 1px solid grey;
+            margin: 1em auto;
+            width: 80%;
+            height: 250px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            img {
+                width: 100%;
+                height: 80%;
+                padding: 0;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .realisations_notsmall{
+        .carousel {
+            .carousel-inner {
+                max-height: 70vh;
+    
+                img {
+                    height: 250px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+    
+                .carousel-caption {
+                    z-index: 2;
+                }
+    
+                .carousel_shadow {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 0%;
+                    width: 100%;
+                    background-color: rgba(0, 0, 0, 0.6);
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .realisations {
+        .realisations_notsmall {
+            .carousel {
+                .carousel-inner {
+                    img {
+                        height: 450px;
+                    }
+                    .carousel_shadow {
+                        height: 35%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .realisations {
+        .realisations_notsmall {
+            .carousel {
+                .carousel-inner {
+                    img {
+                        height: 600px;
+                    }
+                    .carousel_shadow {
+                        height: 20%;
+                        bottom: 2%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// realisations end
+
+// pricelist start
+
+@media screen and (max-width: 576px) {
+    .pricelist .pricelist_cards .pricelist_card {
+        width: 90%;
+    }
+}
+
+.pricelist {
+
+    .pricelist_cards {
+        
+        .pricelist_card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 25em;
+            background-color: white;
+            border: 1px solid black;
+            padding: 1em;
+            transition: transform .5s;
+            -webkit-box-shadow: 4px 4px 18px 0px rgba(20, 2, 2, 1);
+            -moz-box-shadow: 4px 4px 18px 0px rgba(20, 2, 2, 1);
+            box-shadow: 4px 4px 18px 0px rgba(20, 2, 2, 1);
+
+            button {
+                padding: .3em 2em;
+                border-radius: 10px;
+                border: 1px solid $myBlack;
+                transition: background .5s;
+
+            }
+
+            .priceBtn:hover {
+                background-color: $myWhite2;
+            }
+
+            .priceBtn_Highlight {
+                background-color:$first;
+            }
+
+            .priceBtn_Highlight:hover {
+                background-color: $first2;
+            }
+        }
+
+        .pricelist_card:hover {
+            transform: scale(.95);
+        }
+    }
+
+    .pricelist_p {
+        text-align: justify;
+
+        a{
+            color: $myBlack;
+        }
+    }
+}
+
+// pricelist end
+// team start
+
+.team {
+    background-image: url(../img/teamBgc.jpg);
+    padding-bottom: 8em;
+    h2 {
+        color: $myWhite;
+    }
+    .team_cards {
+        margin-top: 5em;
+        position: relative;
+        z-index: 2;
+        
+        .team_card {
+            height: 32em;
+            transition: transform .3s;
+            .card-title {
+                margin: 0 auto;
+            }
+            .card-text {
+                text-align: justify;
+            }
+
+            a {
+                color: $second;
+                font-size: 1.5rem;
+                transition: color .3s;
+            }
+
+            a:hover {
+                color: $third;
+            }
+        }
+
+        .team_card:hover {
+            transform: scale(.95);
+        }
+    }
+}
+
+// team end
+// achievments start
+
+.achievements {
+    .achievements_cards {
+        margin-top: 7em;
+        margin-bottom: 5em;
+        .achievements_card {
+            i {
+                font-size: 2rem;
+                padding: 1em;
+            }
+        }
+        .achievements_card p:nth-child(2) {
+            color: $second;
+            font-size: 1.3rem;
+            filter: blur(4px);
+            transition: color .3s, filter .3s;
+        }
+        .achievements_card:hover p:nth-child(2){
+            color: $second;
+            filter: blur(0);
+        }
+        .achievements_card p:nth-child(3) {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+// achievments end
+// contact start
+
+.contact {
+    background-image: url('../img/contactBgc.jpg');
+    color: $myWhite;
+    .contact_cards {
+        display: flex;
+        align-items: center;
+        .contact_card {
+            position: relative;
+            z-index: 2;
+            padding: 2em;
+    
+            a {
+                color: $second;
+                font-size: 1.5rem;
+                padding: .8em;
+                transition: color .3s;
+            }
+    
+            a:hover {
+                color: $third;
+            }
+        }
+    }
+
+}
+
+// contact end
+
+// footer start
+
+.footer {
+    color: $myBlack;
+    p {
+        margin-bottom: 0;
+    }
+}
+
+// footer end
