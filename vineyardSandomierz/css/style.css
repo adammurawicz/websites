@@ -8,9 +8,14 @@
   padding: 0;
 }
 
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
 body {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-family: 'Montserrat', sans-serif;
-  background-color: #f2f2f2;
+  background-color: #161F30;
 }
 /*# sourceMappingURL=style.css.map */
