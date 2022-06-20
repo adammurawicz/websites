@@ -46,15 +46,19 @@ h1.company-name {
     overflow: hidden;
 
     &__text {
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
         justify-content: center;
         align-items: center;
         grid-row: 2/3;
         grid-column: 1/3;  
         padding: 2em;
 
+
         p {
             font-weight: 200;
+            color: $myWhite;
         }
     }
 
@@ -67,7 +71,6 @@ h1.company-name {
         background-image: url('../img/headerMobile.jpg');
         background-size: cover;
         background-position: center;
-        // filter: sepia();
     }
 
     &__shadow {
@@ -107,11 +110,54 @@ h1.company-name {
     top: 3em;
     left: 1em;
     transform: translateY(-50%);
-    z-index: 3;
+    z-index: 5;
 
     &-inner, &-inner::before, &-inner::after {
         background-color: $myWhite;
         z-index: 4;
+    }
+    
+}
+.nav {
+    &-mobile {
+        position: fixed;
+        height: 100vH;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: $myWhite;
+        transform: translateX(-102%);
+        transition: transform .3s;
+        z-index: 4;
+        
+        &--active {
+            transform: translateX(0);
+        }
+    }
+    
+        &-desktop {
+        display: none;
+    }
+
+    &__link {
+        position: relative;
+        display: inline-block;
+        margin: 0.5em;
+        padding: 0.5em;
+        font-size: 2.3rem;
+        color: $fourth;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: color .3s;
+
+        &:hover {
+            color: $first;
+        }
     }
 }
 
