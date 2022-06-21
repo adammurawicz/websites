@@ -100,6 +100,31 @@ h1.company-name {
   color: #716e23;
 }
 
+.section-title {
+  position: relative;
+  margin: 0 auto 2em;
+  font-size: 3.2rem;
+  color: #716e23;
+  font-weight: 200;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.section-title::before {
+  position: absolute;
+  bottom: -0.1em;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #716e23;
+  content: '';
+}
+
+.section-title span {
+  font-weight: 900;
+}
+
 .header {
   display: -ms-grid;
   display: grid;
@@ -281,10 +306,10 @@ h1.company-name {
   border: 1px solid transparent;
   border-radius: 8px;
   background-color: #161F30;
-  -webkit-transition: border .3s, -webkit-transform .5s;
-  transition: border .3s, -webkit-transform .5s;
-  transition: transform .5s, border .3s;
-  transition: transform .5s, border .3s, -webkit-transform .5s;
+  -webkit-transition: border .3s, -webkit-transform .6s;
+  transition: border .3s, -webkit-transform .6s;
+  transition: transform .6s, border .3s;
+  transition: transform .6s, border .3s, -webkit-transform .6s;
   z-index: 4;
   color: #f2f2f2;
 }
@@ -339,6 +364,69 @@ h1.company-name {
   -ms-grid-row-span: 1;
   grid-row: 3/4;
   grid-column: 1/-1;
+}
+
+.info {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "title title title" "box box box" "box box box";
+  padding: 6em 2em;
+}
+
+.info__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: title;
+}
+
+.info__boxes {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: box;
+}
+
+.info__box-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: brightness(0.65);
+          filter: brightness(0.65);
+}
+
+.info__box-title {
+  margin: 0.3em 0;
+  font-size: 2.6rem;
+  color: #716e23;
+  font-weight: 200;
+}
+
+.info__box-text {
+  margin-bottom: 0.5em;
+  color: #d2caca;
+}
+
+.info__box-link {
+  display: block;
+  margin-bottom: 2em;
+  font-weight: bold;
+  color: #716e23;
+  text-decoration: none;
+  text-align: right;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+  padding: 0.3em;
+}
+
+.info__box-link:hover {
+  color: #44420b;
+}
+
+.info__bg-icon {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
