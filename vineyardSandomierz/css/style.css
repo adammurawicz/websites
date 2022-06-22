@@ -429,6 +429,50 @@ h1.company-name {
   display: none;
 }
 
+.brands {
+  padding: 6em 2em;
+  background-color: #173540;
+}
+
+.brands__box {
+  margin: 1em 0;
+  padding: 2em 1em;
+  text-align: center;
+  border: 1px solid transparent;
+  color: #d2caca;
+  border-radius: 8px;
+  background-color: #161F30;
+  cursor: pointer;
+  -webkit-transition: border .3s, -webkit-transform .3s;
+  transition: border .3s, -webkit-transform .3s;
+  transition: border .3s, transform .3s;
+  transition: border .3s, transform .3s, -webkit-transform .3s;
+}
+
+.brands__box:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  border: 1px solid #217373;
+}
+
+.brands__item {
+  margin: 1em 0;
+}
+
+.brands .fas {
+  font-size: 3rem;
+  padding: 0.3em 0;
+  color: #716e23;
+}
+
+.brands__item-name {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  font-size: 1.8rem;
+  color: #716e23;
+  font-size: 1.3rem;
+}
+
 @media screen and (min-width: 576px) {
   .info {
         grid-template-areas: "title box" "title box" "title box";
@@ -511,6 +555,25 @@ h1.company-name {
     -ms-grid-column: 7;
     -ms-grid-column-span: 3;
     grid-column: 7/10;
+  }
+  .brands {
+    padding: 8em 2em;
+  }
+  .brands__box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .brands__item {
+    margin: 0 1em;
+  }
+  .brands__item-name {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -618,6 +681,9 @@ h1.company-name {
   }
   .hamburger {
     display: none;
+  }
+  .brands__item-name {
+    font-size: 2rem;
   }
 }
 

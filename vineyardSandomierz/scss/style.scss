@@ -260,7 +260,7 @@ h1.company-name {
     }
 }
 
-    // info
+      // info
 
 .info {
     position: relative;
@@ -314,6 +314,48 @@ h1.company-name {
 
     &__bg-icon {
         display: none;
+    }
+}
+
+    // brands
+
+.brands {
+    padding: 6em 2em;
+    background-color: $fourth;
+
+    &__box {
+        margin: 1em 0;
+        padding: 2em 1em;
+        text-align: center;
+        border: 1px solid transparent;
+        color: $myWhiteDark;
+        border-radius: 8px;
+        background-color: $fifth;
+        cursor: pointer;
+        transition: border .3s, transform .3s;
+
+        &:hover {
+            transform: scale(.95);
+            border: 1px solid $second;
+        }
+    }
+
+    &__item {
+        margin: 1em 0;
+    }
+
+    .fas {
+        font-size: 3rem;
+        padding: 0.3em 0;
+        color: $first
+    }
+
+    &__item-name {
+        margin-top: 0;
+        margin-bottom: 1.5em;
+        font-size: 1.8rem;
+        color: $first;
+        font-size: 1.3rem;
     }
 }
 

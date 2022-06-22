@@ -106,6 +106,12 @@
         display: none;
     }
 
+    .brands {
+        &__item-name {
+            font-size: 2rem;
+        }
+    }
+
 }
 
 @media screen and (min-width: 992px) {
