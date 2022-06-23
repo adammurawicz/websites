@@ -1,5 +1,14 @@
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 320px) {
     
+    .cards {
+        &__box {
+            padding: 6em 2em;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+
     .info {
         grid-template-areas:
         "title box"
