@@ -270,31 +270,44 @@ h1.company-name {
     "box box box"
     "box box box";
     padding: 6em 2em;
-
+    
     &__title {
         grid-area: title;
     }
-
+    
     &__boxes {
         grid-area: box;
+    }
+
+    &__box:hover .info__box-img {
+        transform: scale(1.1);
+    }
+    
+    &__box-img-container {
+        overflow: hidden;
+        height: 100%;
     }
 
     &__box-img {
         width: 100%;
         object-fit: cover;
-        filter: brightness(.65)
+        filter: brightness(.65);
+        transition: transform .8s;
+        
     }
-
+    
     &__box-title {
         margin: 0.3em 0;
         font-size: 2.6rem;
         color: $first;
         font-weight: 200;
+        text-align: center;
     }
-
+    
     &__box-text {
         margin-bottom: 0.5em;
         color: $myWhiteDark;
+        text-align: justify;
     }
 
     &__box-link {
@@ -358,6 +371,49 @@ h1.company-name {
         font-size: 1.3rem;
     }
 }
+
+    // newsletter
+
+    .newsletter {
+        padding: 8em 2em;
+        background-color: $first;
+        text-align: center;
+
+        &__text {
+            padding: .5em;
+            margin-bottom: 1em;
+            font-size: 4rem;
+            font-weight: 200;
+            text-align: center;
+        }
+
+        &__form {
+            input {
+                margin-bottom: 1em;
+                padding: 1em;
+                width: 100%;
+                background-color: $myWhiteDark;
+                border: 1px solid transparent;
+            }
+
+            button {
+                padding: 1em;
+                border: 1px solid $myWhiteDark;
+                background: none;
+                color: $myWhiteDark;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color .3s, color .3s;
+
+                &:hover {
+                    color: $first;
+                    background-color: $myWhiteDark
+                }
+            }
+
+
+        }
+    }
 
 // main end
 
