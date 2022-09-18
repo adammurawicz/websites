@@ -12,6 +12,7 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    background-color: $my-white;
 }
 
 body {
@@ -29,7 +30,7 @@ body {
     background: none;
     border: 1px solid transparent;
     cursor: pointer;
-    z-index: 3;
+    z-index: 4;
 
     &:focus {
         outline: none;
@@ -71,3 +72,839 @@ body {
         }
     }
 }
+
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vH;
+    width: 100%;
+    transition:.5s cubic-bezier(.65, .05, 0.36, 1);
+    background-image: $gradientOne;
+    transform: translateX(100%);
+    z-index: 3;
+
+    &--active {
+        transform: translateX(0);
+    }
+
+    &__item {
+        position: relative;
+        display: block;
+        margin: 0.5em 0;
+        padding: 0.5em 2em;
+        font-size: 2.8rem;
+        text-decoration: none;
+        color: $my-white;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            transform: scaleY(0);
+            background-color: $my-white;
+            content: '';
+            transition: transform .3s;
+        }
+
+        &:hover::before {
+            transform: scaleY(1);
+        }
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+        .burger-btn {
+            top: 50px;
+            right: 50px;
+        }
+
+        .nav {
+            &__item {
+                font-size: 4rem;
+            }
+        }
+}
+
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+    background-color: $my-black;
+}
+
+// nav end
+
+// header start
+
+.header {
+    position: relative;
+    height: 100vH;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @include heroImg('../img/headerMobile.jpg');
+    
+    &__heading,
+    &__text,
+    &__btn {
+        z-index: 2;
+    }
+    
+    &__heading,
+    &__text {
+        background-image: $gradientFour;
+        background-clip: text;
+        color: transparent;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        font-size: 2.5rem;
+    }
+
+    &__text {
+        padding: 0.8em 1em;
+        font-size: 2.5rem;
+    }
+
+    &__btn {
+        margin-top: 2em;
+        padding: 0.8em 1.6em;
+        font-size: 1.4rem;
+        background-color: $my-white;
+        opacity: .8;
+        border: none;
+        border-radius: 8px;
+        color: $third-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: color .3s;
+        
+        &:hover {
+            color: $my-white;
+        }
+
+        &::before {
+            background-color: $third-color;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        height: 80vH;
+        background-image: url('../img/headerDesktop.jpg');
+
+       
+        &__heading {
+            font-size: 3.8rem;
+        }
+    
+        &__text {
+            padding: 1.5em 1em;
+            font-size: 2.5rem;
+        }
+    
+        &__btn {
+            margin-top: 3em;
+            padding: .8em 1.8em;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header {
+        background-position-y: 100%;
+
+        &__heading {
+            font-size: 4.2rem;
+        }
+    
+        &__text {
+            font-size: 3rem;
+        }
+    
+        &__btn {
+            font-size: 2rem;
+        }
+    }
+}
+
+@keyframes navItemsAnimation {
+    from {
+        transform: translateX(200%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.nav-items-animation {
+    animation: navItemsAnimation 1s both;
+    animation-delay: .3s;
+}
+
+// header end
+
+// city section start
+
+.city {
+    color: $third-color;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        margin: 2em 0;
+
+        &-img{
+            width: 100%;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    &__title {
+        margin-bottom: 0.5em;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .city {
+        &__box {
+            flex-direction: row;
+            justify-content: space-between;
+
+            &-text {
+                width: 55%;
+
+                &--right {
+                    text-align: right;
+                }
+            }
+
+            &-img {
+                width: 40%;
+                overflow: hidden;
+
+                &--right {
+                    order: 1;
+                }
+
+                img {
+                    width: 100%;
+                    transition: transform .5s;
+                }
+
+                img:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        &__img {
+            margin-bottom: 0;
+            max-height: 300px;
+        }
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .city__box-text {
+        font-size: 1.8rem;;
+    } 
+}
+
+@media screen and (min-width: 992px) {
+    .city {
+        &__box {
+            margin: 5em 0;
+
+            &-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-bottom: 2.5em;
+            }
+        }
+
+        &__title {
+            font-size: 3.4rem;
+        }
+
+        &__text {
+            font-size: 2rem;
+        }
+    }
+}
+
+
+// city section end
+// hero img start
+
+.hero-img {
+    overflow: hidden;
+    position: relative;
+    padding: 10em 2em;
+    @include heroImg('../img/heroMobile.jpg');
+    text-align: center;
+    color: $my-white;
+
+    &__title,
+    &__text,
+    hr {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title {
+        font-size: 4rem;
+        margin-bottom: 0.5em;
+    }
+
+    &__text {
+        padding: 1em 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-img {
+        padding: 18em 2em;
+        
+
+        hr {
+            margin: 0 auto;
+            width: 70%;
+        }
+
+        &__text {
+            font-size: 2.2rem;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .hero-img {
+        padding: 22em 2em;
+        @include heroImg('../img/heroDesktop.jpg');
+
+        &__title {
+            font-size: 5rem;
+        }
+
+        hr {
+            width: 60%;
+            max-width: 900px;
+        }
+
+        &__text {
+            font-size: 2.4rem;
+            padding: 1em;
+        }
+    }
+}
+
+// hero img end
+// highlights start
+
+.highlights {
+    &__card {
+        position: relative;
+        margin: 1em 0;
+        height: 550px;
+        color: $my-white;
+        text-align: center;
+        perspective: 1000px;
+
+        &:hover {
+            .highlights__card-img {
+                transform: rotateY(-180deg);
+                opacity: 0;
+            }
+            .highlights__card-info {
+                transform: rotateY(0);
+                opacity: 1;
+            }
+        }
+
+        &-img {
+            padding: 2em;
+            height: 100%;
+            border-radius: 8px;
+            background-size: cover;
+            transition: transform 1s, opacity 1s;
+            background-position: center;
+            background-size: cover;
+
+            &--first {
+                background-image: url('../img/hgl1.jpg');
+            }
+
+            &--second {
+                background-image: url('../img/hgl2.jpg');
+            }
+
+            &--third {
+                background-image: url('../img/hgl3.jpg');
+            }
+
+            &-title {
+                font-size: 2.4rem;
+            }
+
+            &-title,
+            &-info {
+                position: relative;
+                z-index: 2;
+            }
+
+            &-info {
+                position: absolute;
+                bottom: 30px;
+                right: 30px;
+                font-size: 2rem;
+
+                i {
+                    margin-right: 0.3em;
+                    color: $first-color;
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        &-info {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-image: $gradientOne;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 8px;
+            opacity: 0;
+            transform: rotateY(180deg);
+            transition: transform 1s, opacity 1s;
+
+            &-title {
+                @include highlightStyles;
+                top: 1.2em;
+                font-size: 2.6rem;
+            }
+
+            &-list {
+                margin: 0 auto;
+                width: 70%;
+                list-style: none;
+
+                &-item {
+                    padding: 1em;
+                    font-size: 1.4rem;
+                    border-bottom: 1px solid $my-white;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+
+            &-btn {
+                @include highlightStyles;
+                bottom: 2em;
+                padding: 1em;
+                border-radius: 8px;
+                width: 80%;
+                border: none;
+                background-color: $fourth-color;
+                cursor: pointer;
+                color: $my-white; 
+
+                &::before {
+                    background-color: $fourth-color-hover;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .highlights {
+        &__cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        &__card {
+            margin: 1em;
+            width: 45%;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .highlights {
+        &__card {
+            width: 30%;
+        }
+    }
+}
+
+// highlights end
+// trips start
+.trips {
+    position: relative;
+    overflow: hidden;
+    @include heroImg('../img/stationMobile.jpg');
+
+    .section-heading,
+    &__option {
+        color: $my-white;
+        position: relative;
+        z-index: 2;
+    }
+    
+    &__option {
+        margin: 1em 0;
+        box-shadow: 5px 5px 10px rgba($color: #2e2e2e, $alpha: .2);
+        background-color: $my-white;
+        overflow: hidden;
+
+        &-img {
+            width: 100%;
+            transition: transform .5s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        
+        &-info {
+            padding: 2em;
+            background-color: $my-white;
+            z-index: 2;
+        }
+
+        &-heading {
+            color: $second-color;
+            margin-bottom: 0.5em;
+            font-size: 2.2rem;
+        }
+
+        &-text {
+            margin-bottom: 0.5em;
+            font-size: 1.2rem;
+            color: $my-black;
+        }
+
+        &-btn {
+            margin-top: 1em;
+            padding: 0.8em;
+            width: 100%;
+            color: $my-white;
+            background-color: $third-color;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+
+            &::before {
+                background-color: $first-color;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .trips {
+        &__option {
+            display: flex;
+            margin: 2em 0;
+            width: 100%;
+
+            &-img {
+                width: 50%;
+                height: auto;
+
+                &--right {
+                    order: 1;
+                }
+            }
+            &-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            &-heading {
+                margin-bottom: 0.5em;
+                font-size: 3.4rem;
+            }
+
+            &-btn {
+                padding: 1em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .trips {
+        background-image: url('../img/stationDesktop.jpg');
+
+        &__option {
+            &-img {
+                object-fit: cover;
+                height: 300px;
+            }
+            &-text {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+// trips end
+
+// residences start
+
+.residences{
+    &__box {
+        position: relative;
+        margin: 2em;
+        padding: 2em;
+        border-radius: 8px;
+        box-shadow: 3px 3px 10px #2e2e2e;
+        transition: transform .3s;
+
+        &:hover {
+            transform: scale(.95);
+        }
+
+
+        &-img {
+            position: absolute;
+            top: 16%;
+            left: 85%;
+            transform: translate(-50%,-50%);
+
+            img {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__box-quote {
+        margin-bottom: 1em;
+        font-size: 3rem;
+        color: $third-color;
+    }
+
+    &__box-text {
+        margin-bottom: 1em;
+        font-size: 1.4rem;
+        text-align: justify;
+        color: $my-black;
+    }
+}
+
+@media screen and (min-width: 765px) {
+    .residences {
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .residences.section-padding {
+        padding: 4em 0;
+    }
+}
+
+// residences end
+// contact start
+
+.contact {
+    position: relative;
+    background-color: $my-whiteTwo;
+    overflow: hidden;
+
+    .white-block-left {
+        background-color: $my-black;
+    }
+
+    &__form,
+    &__form-top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form-label {
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+    }
+
+    &__form-input {
+        @include contactForm
+    }
+
+    &__form-textarea {
+        @include contactForm;
+        max-width: 100%;
+        width: 100%;
+        min-width: 100%;
+        min-height: 150px;
+    }
+
+    &__form-btn {
+        margin-top: 1em;
+        align-self: flex-end;
+        padding: 1em;
+        width: 100%;
+        max-width: 300px;
+        color: $my-white;
+        border: none;
+        border-radius: 8px;
+        background-color: $third-color;
+        cursor: pointer;
+        font-size: 1.6rem;
+        
+        &::before {
+            background-color: $first-color;
+        }
+    }
+
+}
+// contact end
+// footer start
+
+.footer {
+    color: $my-white;
+    background-color: $my-black;
+    
+    .wrapper {
+        padding: 6em 2em 2em;
+    }
+
+    &__box {
+        font-size: 1.3rem;
+
+        p {
+            text-align: justify;
+        }
+    }
+
+    &__box-desktop {
+        display: none;
+    }
+
+    &__box-title {
+        margin-bottom: 1em;
+        font-size: 3rem;
+        text-transform: uppercase;
+
+        &--long{
+            text-align: justify;
+        }
+    }
+
+    &__box-social {
+        margin: 2em 0 1em;
+    }
+
+    &__box-link {
+        padding: 0 .3em;
+        font-size: 3.2rem;
+        color: $my-white;
+        transition: color .3s;
+        text-decoration: none;
+
+        &:hover {
+            color: $first-color;
+        }
+        
+        &:first-child {
+            padding-left: 0;
+        }
+
+    }
+
+    &__bottom-text {
+        padding: 2em;
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+
+        &__boxes {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__box-desktop {
+            display: block;
+        }
+
+        &__box {
+            margin: 0 2em;
+            width: 25%;
+
+            &:first-child {
+                width: 50%;
+            }
+        }
+
+        &__box-title {
+            font-size: 2.2rem;
+        }
+
+        &__box-list {
+            list-style: none;
+        }
+
+        &__box-list-item {
+            margin-bottom: 1em;
+            list-style-type: none;
+            
+            a {
+                text-decoration: none;
+                color:$my-whiteTwo;
+                transition: color .3s;
+
+                &:hover {
+                    color: $first-color;
+                }
+            }
+
+        }
+
+    }
+}
+
+// footer end

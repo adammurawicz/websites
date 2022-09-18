@@ -6,16 +6,317 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greater Poland</title>
     <script src="https://kit.fontawesome.com/bdb8f978f5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    
+ 
+<!-- nav start -->
 <button class="burger-btn">
     <div class="burger-btn__box">
         <div class="burger-btn__bars"></div>
     </div>
 </button>
+    
+<nav class="nav">
 
-    <script src="./js/main.js"></script>
+    <div class="nav__items">
+        <a href="#highlights" class="nav__item">Poznan city highlights</a>
+        <a href="#trips" class="nav__item">Great Poland trips</a>
+        <a href="#residents" class="nav__item">Famous Residents</a>
+        <a href="#contact" class="nav__item">Contact</a>
+    </div>
+
+</nav>
+
+<!-- nav end -->
+<!-- header start -->
+
+<header class="header section">
+    <h1 class="header__heading">Greater Poland</h1>
+    <p class="header__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <a href="#trips" class="header__btn btn-special-animation">Recommend trips</a>
+    <div class="white-block white-block-left"></div>
+    <div class="shadow"></div>
+</header>
+<!-- header end -->
+<!-- main start -->
+<main class="main">
+    <!-- city of ... start -->
+    <section class="city section-padding section white-section" id="city">
+        <div class="wrapper">
+            <h2 class="section-heading">Poznan: city of the history & culture</h2>
+
+            <div class="city__box">
+                <div class="city__box-img">
+                    <img src="./img/history.jpg" alt="Poznan history museum - an exhibiton" class="city__img">
+                </div>
+                <div class="city__box-text">
+                    <h3 class="city__title">History:</h3>
+                    <p class="city__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum earum reiciendis eos dignissimos aut itaque magni perferendis fuga facilis, quisquam, quam consequuntur animi hic perspiciatis. Corrupti reiciendis necessitatibus amet.</p>
+                </div>
+            </div>
+
+            <div class="city__box">
+                <div class="city__box-img city__box-img--right">
+                    <img src="./img/culture.jpg" alt="Poznan theatre - a performance" class="city__img">
+                </div>
+                <div class="city__box-text city__box-text--right">
+                    <h3 class="city__title">Culture:</h3>
+                    <p class="city__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum earum reiciendis eos dignissimos aut itaque magni perferendis fuga facilis, quisquam, quam consequuntur animi hic perspiciatis. Corrupti reiciendis necessitatibus amet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- city of end -->
+    <!-- hero start -->
+    <section class="hero-img section">
+        <div class="white-block white-block-left"></div>
+        <div class="white-block white-block-right"></div>
+
+        <p class="hero-img__title">Greater Poland</p>
+        <hr>
+        <p class="hero-img__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, esse!</p>
+        <hr>
+
+        <div class="shadow"></div>
+    </section>
+    <!-- hero end -->
+    <!-- highlights start-->
+    <section class=" section section-padding white-section" id="highlights">
+        <div class="wrapper">
+            <h2 class="section-heading">Poznan city highlights:</h2>
+
+            <div class="highlights__cards">
+
+                <div class="highlights__card" onclick="void(0)">
+                    <div class="highlights__card-img highlights__card-img--first">
+                        <h3 class="highlights__card-img-title">Ostrow Tumski Island</h3>
+                        <p class="highlights__card-img-info"><i class="fas fa-info-circle"></i> More info...</p>
+                        <!-- <div class="shadow"></div> -->
+                    </div>
+                    <div class="highlights__card-info">
+                        <h3 class="highlights__card-info-title">Ostow Tumski Island</h3>
+                        <ul class="highlights__card-info-list">
+                            <li class="highlights__card-info-list-item">Lorem ipsum dolor sit amet consectetur.</li>
+                            <li class="highlights__card-info-list-item">Lorem ipsum dolor sit amet consectetur.</li>
+                            <li class="highlights__card-info-list-item">Lorem ipsum dolor sit amet consectetur.</li>
+                            <li class="highlights__card-info-list-item">Lorem ipsum dolor sit amet consectetur.</li>
+                            <li class="highlights__card-info-list-item">Lorem ipsum dolor sit amet consectetur.</li>
+                        </ul>
+                        <button class="highlights__card-info-btn btn-special-animation">Reserve a guide</button>
+                    </div>
+                </div>
+
+                
+                <div class="highlights__card" onclick="void(0)">
+                    <div class="highlights__card-img highlights__card-img--second">
+                        <h3 class="highlights__card-img-title">Market square</h3>
+                        <p class="highlights__card-img-info"><i class="fas fa-info-circle"></i> More info...</p>
+                        <div class="shadow"></div>
+                    </div>
+                    <div class="highlights__card-info" onclick="void(0)">
+                        <h3 class="highlights__card-info-title">Market square</h3>
+                        <ul class="highlights__card-info-list">
+                            <li class="highlights__card-info-list-item">Lorem ipsum dolor sit amet consectetur.</li>
+                            <li class="highlights__card-info-list-item">Lorem ipsum dolor sit amet consectetur.</li>
+                            <li class="highlights__card-info-list-item">Lorem ipsum dolor sit amet consectetur.</li>
+                            <li class="highlights__card-info-list-item">Lorem ipsum dolor sit amet consectetur.</li>
+                            <li class="highlights__card-info-list-item">Lorem ipsum dolor sit amet consectetur.</li>
+                        </ul>
+                        <button class="highlights__card-info-btn btn-special-animation">Reserve a guide</button>
+                    </div>
+                </div>
+                
+                <div class="highlights__card" onclick="void(0)">
+                    <div class="highlights__card-img highlights__card-img--third">
+                        <h3 class="highlights__card-img-title">Cidadel park</h3>
+                        <p class="highlights__card-img-info"><i class="fas fa-info-circle"></i> More info...</p>
+                        <div class="shadow"></div>
+                    </div>
+                    <div class="highlights__card-info">
+                        <h3 class="highlights__card-info-title">Cidadel park</h3>
+                        <ul class="highlights__card-info-list">
+                            <li class="highlights__card-info-list-item">Lorem ipsum dolor sit amet consectetur.</li>
+                            <li class="highlights__card-info-list-item">Lorem ipsum dolor sit amet consectetur.</li>
+                            <li class="highlights__card-info-list-item">Lorem ipsum dolor sit amet consectetur.</li>
+                            <li class="highlights__card-info-list-item">Lorem ipsum dolor sit amet consectetur.</li>
+                            <li class="highlights__card-info-list-item">Lorem ipsum dolor sit amet consectetur.</li>
+                        </ul>
+                        <button class="highlights__card-info-btn btn-special-animation">Reserve a guide</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- highlights end-->
+    <!-- trips start -->
+    <section class="trips section-padding section" id="trips">
+        <div class="white-block white-block-right"></div>
+        <div class="white-block white-block-left"></div>
+
+        <h2 class="section-heading">Greater Poland trips:</h2>
+
+        <div class="wrapper">
+            <div class="trips__box">
+
+                <div class="trips__option">
+                    <img src="./img/rogalin.jpg" alt="Rogalin palace" class="trips__option-img">
+                    <div class="trips__option-info">
+                        <h3 class="trips__option-heading">Rogalin Palace</h3>
+                        <p class="trips__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur saepe est quas quis dolor dicta quia libero totam nemo assumenda?</p>
+                        <p class="trips__option-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <button class="trips__option-btn btn-special-animation">Buy a trip</button>
+                    </div>
+                </div>
+
+                <div class="trips__option">
+                    <img src="./img/zielonka.jpg" alt="Zielonka Forest" class="trips__option-img trips__option-img--right">
+                    <div class="trips__option-info">
+                        <h3 class="trips__option-heading">Zielonka Forest</h3>
+                        <p class="trips__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur saepe est quas quis dolor dicta quia libero totam nemo assumenda?</p>
+                        <p class="trips__option-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <button class="trips__option-btn btn-special-animation">Buy a trip</button>
+                    </div>
+                </div>
+
+                <div class="trips__option">
+                    <img src="./img/gniezno.jpg" alt="Gniezno cathedral" class="trips__option-img">
+                    <div class="trips__option-info">
+                        <h3 class="trips__option-heading">Gniezno cathedral</h3>
+                        <p class="trips__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur saepe est quas quis dolor dicta quia libero totam nemo assumenda?</p>
+                        <p class="trips__option-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <button class="trips__option-btn btn-special-animation">Buy a trip</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="shadow"></div>
+    </section>
+    <!-- trips end -->
+    <!-- residents start -->
+    <section class="residences section-padding section-white-section" id="residents">
+        <h2 class="section-heading">Famouse residents:</h2>
+        <div class="wrapper">
+
+            <div class="residences_boxes">
+
+                <div class="residences__box">
+                    <div class="residences__box-img">
+                        <img src="./img/residence1.jpg" alt="Famous residence one">
+                    </div>
+                    <div class="residences__box-info">
+                        <div class="residences__box-quote"><i class="fas fa-info"></i></div>
+                        <p class="residences__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quibusdam odio iure cupiditate enim soluta, possimus necessitatibus! Temporibus, obcaecati sint?</p>
+                        <strong>Anna Kościuszko</strong>
+                    </div>
+                </div>
+
+                <div class="residences__box">
+                    <div class="residences__box-img">
+                        <img src="./img/residence2.jpg" alt="Famous residence two">
+                    </div>
+                    <div class="residences__box-info">
+                        <div class="residences__box-quote"><i class="fas fa-info"></i></div>
+                        <p class="residences__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quibusdam odio iure cupiditate enim soluta, possimus necessitatibus! Temporibus, obcaecati sint?</p>
+                        <strong>Jan Kowalski</strong>
+                    </div>
+                </div>
+
+                <div class="residences__box">
+                    <div class="residences__box-img">
+                        <img src="./img/residence3.jpg" alt="Famous residence three">
+                    </div>
+                    <div class="residences__box-info">
+                        <div class="residences__box-quote"><i class="fas fa-info"></i></div>
+                        <p class="residences__box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quibusdam odio iure cupiditate enim soluta, possimus necessitatibus! Temporibus, obcaecati sint?</p>
+                        <strong>Wiesław Wiśniewski</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- residents end -->
+    <!-- contact start -->
+
+    <section class="contact section-padding section white-section" id="contact">
+        <div class="white-block white-block-right"></div>
+        <div class="white-block white-block-left"></div>
+
+        <h2 class="section-heading">Contact with tourist information point:</h2>
+
+        <form action="" class="contact__form">
+            <div class="contact__form-top">
+
+                <label for="name" class="contact__form-label">Name:</label>
+                <input type="text" class="contact__form-input" id="name">
+
+                <label for="email" class="contact__form-label">Email:</label>
+                <input type="text" class="contact__form-input" id="email">
+            </div>
+
+            <label for="" class="contact__form-label">Your message:</label>
+            <textarea name="" id="" cols="30" rows="10" id="msg" class="contact__form-textarea" ></textarea>
+
+            <button type="submit" class="contact__form-btn btn-special-animation">Send</button>
+
+        </form>
+
+    </section>
+    <!-- contact end -->
+</main>
+<!-- main end -->
+<!-- footer start -->
+
+<footer class="footer">
+    <div class="wrapper">
+        <div class="footer__boxes">
+
+            <div class="footer__box">
+                <h3 class="footer__box-title footer__box-title--long"> <i class="fas fa-info-square"></i>Greater Poland Tourist Information Office:</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti ducimus placeat error eum deserunt omnis recusandae blanditiis earum excepturi odio?</p>
+                <div class="footer__box-social">
+                    <a href="#" class="footer__box-link"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#" class="footer__box-link"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#" class="footer__box-link"><i class="fab fa-instagram-square"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer__box footer__box-desktop">
+                <h3 class="footer__box-title">Highlights:</h3>
+                <li class="footer__box-list-item"><a href="#">Ostrow Tumski</a></li>
+                <li class="footer__box-list-item"><a href="#">Market square</a></li>
+                <li class="footer__box-list-item"><a href="#">Citadel Park</a></li>
+                <li class="footer__box-list-item"><a href="#">More...</a></li>
+            </div>
+            
+            <div class="footer__box footer__box-desktop">
+                <h3 class="footer__box-title">Trips:</h3>
+                <li class="footer__box-list-item"><a href="#">Rogalin Palace</a></li>
+                <li class="footer__box-list-item"><a href="#">Zielonka Forest</a></li>
+                <li class="footer__box-list-item"><a href="#">Gniezno</a></li>
+                <li class="footer__box-list-item"><a href="#">More...</a></li>
+            </div>
+            
+        </div>
+    </div>
+    <hr>
+    <p class="footer__bottom-text"> &copy; <span class="footer__year"></span> Greater Poland </p>
+</footer>
+
+<!-- footer end -->
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="./js/slick.js"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>

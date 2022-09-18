@@ -1,11 +1,14 @@
-$main-color: #0091C9;
+$first-color: #0091C9;
 $second-color: #45B8E6;
 $third-color: #00A1E0;
 $fourth-color: #1D4E61;
+$fourth-color-hover: #0b303f;
 $fifth-color: #007CAD;
-$my-white: #eee;
+$my-white: rgb(230, 227, 227);
+$my-whiteTwo: rgb(225, 225, 225);
 $my-black:#2e2e2e;
 
 $gradientOne: linear-gradient(45deg, rgba(0,145,201,1) 10%, rgba(69,184,230,1) 75%);
 $gradientTwo: linear-gradient(45deg, rgba(0,145,201,1) 10%, rgba(29,78,97,1) 75%);
 $gradientThree: linear-gradient(45deg, rgba(0,145,201,1) 10%, rgba(0,124,173,1) 75%);
+$gradientFour: linear-gradient(45deg, rgba(238,238,238,1) 10%, rgba(69,184,230,1) 75%);
